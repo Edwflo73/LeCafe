@@ -47,7 +47,7 @@
           <div class="carousel-track" data-carousel-track>
             <article class="carousel-slide is-active" data-carousel-slide>
               <img
-                src="https://source.unsplash.com/1600x900/?cafe,patio,terrace"
+                src="./assets/patio/carousel-1.jpg"
                 alt="Patio de cafeteria con mesas al aire libre"
                 loading="eager"
               />
@@ -59,7 +59,7 @@
             </article>
             <article class="carousel-slide" data-carousel-slide>
               <img
-                src="https://source.unsplash.com/1600x900/?specialty,coffee,barista"
+                src="./assets/patio/carousel-2.jpg"
                 alt="Barista preparando cafe de especialidad"
                 loading="lazy"
               />
@@ -71,7 +71,7 @@
             </article>
             <article class="carousel-slide" data-carousel-slide>
               <img
-                src="https://source.unsplash.com/1600x900/?coffee,shop,outdoor,people"
+                src="./assets/patio/carousel-3.jpg"
                 alt="Clientes disfrutando cafe en terraza"
                 loading="lazy"
               />
@@ -106,7 +106,7 @@
 
         <article class="space-hero">
           <img
-            src="https://source.unsplash.com/1600x900/?cafe,patio,terrace"
+            src="./assets/patio/space-hero.jpg"
             alt="Vista general de un cafe en patio al aire libre"
             loading="lazy"
           />
@@ -121,41 +121,149 @@
         </article>
 
         <div class="space-gallery" aria-label="Galeria de ambiente">
-          <img src="https://source.unsplash.com/900x700/?coffee,patio" alt="Mesa de cafe en patio" loading="lazy" />
-          <img src="https://source.unsplash.com/900x700/?outdoor,cafe,garden" alt="Patio de cafeteria con plantas" loading="lazy" />
-          <img src="https://source.unsplash.com/900x700/?specialty,coffee,shop,interior" alt="Barra de cafe de especialidad" loading="lazy" />
-          <img src="https://source.unsplash.com/900x700/?courtyard,cafe" alt="Area exterior de cafeteria" loading="lazy" />
-          <img src="https://source.unsplash.com/900x700/?latte,table,outdoor" alt="Taza de cafe en mesa exterior" loading="lazy" />
+          <img src="./assets/patio/img_7801.jpg" alt="Vista del patio de Le Cafe" loading="lazy" />
+          <img src="./assets/patio/img_7808.jpg" alt="Area exterior con ambiente de Le Cafe" loading="lazy" />
+          <img src="./assets/patio/img_7809.jpg" alt="Mesa y entorno del patio de Le Cafe" loading="lazy" />
+          <img src="./assets/patio/img_7810.jpg" alt="Espacio del patio de Le Cafe con detalle de decoracion" loading="lazy" />
+          <img src="./assets/patio/img_7817.jpg" alt="Ambiente general de Le Cafe en patio" loading="lazy" />
+          <img src="./assets/patio/img_7800.jpg" alt="Zona del patio de Le Cafe para clientes" loading="lazy" />
         </div>
       </section>
 
       <section id="menu" class="menu reveal">
         <div class="section-head">
-          <p class="eyebrow">Seleccion curada</p>
-          <h2>Menu destacado</h2>
+          <p class="eyebrow">Menu completo</p>
+          <h2>Encuentra tu bebida ideal</h2>
         </div>
 
-        <div class="menu-rail" role="list" aria-label="Bebidas destacadas">
-          <article class="menu-card" role="listitem">
-            <h3>Espresso Doble</h3>
-            <p>Intenso, notas de cacao y nuez.</p>
-            <span>$65</span>
-          </article>
-          <article class="menu-card" role="listitem">
-            <h3>Flat White</h3>
-            <p>Textura sedosa y cuerpo medio.</p>
-            <span>$89</span>
-          </article>
-          <article class="menu-card" role="listitem">
-            <h3>Pour Over</h3>
-            <p>Extraccion limpia para perfiles aromaticos.</p>
-            <span>$110</span>
-          </article>
-          <article class="menu-card card-accent" role="listitem">
-            <h3>Cold Brew Verde</h3>
-            <p>Refrescante, dulce y largo final.</p>
-            <span>$95</span>
-          </article>
+        <div class="menu-ui" data-menu>
+          <div class="menu-tabs" role="tablist" aria-label="Categorias del menu">
+            <button type="button" class="menu-tab is-active" data-menu-tab="solo" aria-selected="true">Solo aqui</button>
+            <button type="button" class="menu-tab" data-menu-tab="calientes" aria-selected="false">Calientes</button>
+            <button type="button" class="menu-tab" data-menu-tab="frios" aria-selected="false">Frios</button>
+            <button type="button" class="menu-tab" data-menu-tab="alimentos" aria-selected="false">Alimentos</button>
+            <button type="button" class="menu-tab" data-menu-tab="otros" aria-selected="false">Otros</button>
+          </div>
+
+          <div class="menu-tools">
+            <input type="search" data-menu-search placeholder="Buscar en el menu..." aria-label="Buscar en el menu" />
+            <div class="menu-filters" role="group" aria-label="Filtrar por cafe">
+              <button type="button" class="menu-filter is-active" data-menu-filter="all">Todo</button>
+              <button type="button" class="menu-filter" data-menu-filter="coffee">Con cafe</button>
+              <button type="button" class="menu-filter" data-menu-filter="nocoffee">Sin cafe</button>
+            </div>
+          </div>
+
+          <div class="menu-panel is-active" data-menu-panel="solo" role="tabpanel">
+            <div class="menu-feature-grid">
+              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="Recuerdo de hogar">
+                <h3>Recuerdo de hogar</h3>
+                <p>Chocolate caliente 100% cacao natural acompanado de pan de concha tradicional.</p>
+                <strong>$65</strong>
+              </article>
+              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="Cocotazo">
+                <h3>Cocotazo</h3>
+                <p>Atole de coco natural con ralladura fina de coco. Cremoso, dulce y reconfortante.</p>
+                <strong>$45</strong>
+              </article>
+              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="Tierra Viva">
+                <h3>Tierra Viva</h3>
+                <p>Mezcla de naranja, toronja, limon y tamarindo con agua mineral. 100% natural.</p>
+                <strong>$69</strong>
+              </article>
+              <article class="menu-feature-item" data-menu-item data-has-coffee="yes" data-name="Dulce Desvelo">
+                <h3>Dulce Desvelo</h3>
+                <p>Agua de horchata casera de arroz con un toque de cafe y canela ahumada.</p>
+                <strong>$69</strong>
+              </article>
+              <article class="menu-feature-item" data-menu-item data-has-coffee="yes" data-name="Carajillo">
+                <h3>Carajillo!</h3>
+                <p>Con leche o sin ella, sin alcohol y con caracter. Perfil limpio y elegante.</p>
+                <strong>$69</strong>
+              </article>
+              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="PepiJal">
+                <h3>PepiJal</h3>
+                <p>Pepino, limon y jalapeno. Refrescante, atrevido y con un toque de picor.</p>
+                <strong>$64</strong>
+              </article>
+              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="Las Chulas">
+                <h3>Las Chulas</h3>
+                <p>Limonadas y naranjadas con jugo natural. Dulces, citricas y sabrosas.</p>
+                <strong>$45</strong>
+              </article>
+            </div>
+            <p class="menu-empty">No hay resultados con ese filtro.</p>
+          </div>
+
+          <div class="menu-panel" data-menu-panel="calientes" role="tabpanel">
+            <ul class="menu-list">
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Espresso"><span>Espresso</span><em>1 oz</em><strong>$20</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Espresso doble"><span>Espresso doble</span><em>2 oz</em><strong>$30</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Americano"><span>Americano</span><em>12 oz</em><strong>$35</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Aerocano"><span>Aerocano</span><em>16 oz</em><strong>$35</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Flat White"><span>Flat White</span><em>8 oz</em><strong>$57</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Machiato"><span>Machiato</span><em>4 oz</em><strong>$25</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Cortado"><span>Cortado</span><em>4 oz</em><strong>$25</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Cappucino"><span>Cappucino</span><em>8 oz</em><strong>$49</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Latte"><span>Latte</span><em>16 oz</em><strong>$57</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Latte vainilla"><span>Latte vainilla</span><em>16 oz</em><strong>$62</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Caramelo"><span>Caramelo</span><em>16 oz</em><strong>$72</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Chocolate"><span>Chocolate</span><em>16 oz</em><strong>$45</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Moka"><span>Moka</span><em>16 oz</em><strong>$51</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Chai"><span>Chai</span><em>16 oz</em><strong>$75</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Matcha"><span>Matcha</span><em>16 oz</em><strong>$79</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Te"><span>Te</span><em>16 oz</em><strong>$30</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="By Le Le"><span>By Le Le</span><em>12 oz</em><strong>$92</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Big Le"><span>Big Le</span><em>16 oz</em><strong>$99</strong></li>
+            </ul>
+            <p class="menu-empty">No hay resultados con ese filtro.</p>
+          </div>
+
+          <div class="menu-panel" data-menu-panel="frios" role="tabpanel">
+            <ul class="menu-list">
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Iced Americano"><span>Iced Americano</span><em>16 oz</em><strong>$40</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Americano Orange"><span>Americano Orange</span><em>16 oz</em><strong>$79</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Iced Latte"><span>Iced Latte</span><em>16 oz</em><strong>$57</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Iced Latte Vainilla"><span>Iced Latte Vainilla</span><em>16 oz</em><strong>$62</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Caramelo Frio"><span>Caramelo Frio</span><em>16 oz</em><strong>$72</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Full Moka Power"><span>Full Moka Power</span><em>16 oz</em><strong>$51</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Iced cacao"><span>Iced cacao</span><em>16 oz</em><strong>$45</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Chai Frio"><span>Chai Frio</span><em>16 oz</em><strong>$75</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Matcha Frio"><span>Matcha Frio</span><em>16 oz</em><strong>$79</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Te Frio"><span>Te Frio</span><em>16 oz</em><strong>$30</strong></li>
+            </ul>
+            <p class="menu-empty">No hay resultados con ese filtro.</p>
+          </div>
+
+          <div class="menu-panel" data-menu-panel="alimentos" role="tabpanel">
+            <div class="menu-feature-grid">
+              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="El Triple Romance">
+                <h3>El Triple Romance</h3>
+                <p>Tres capas de pan doradito con jamon de pavo, queso y toque casero.</p>
+                <strong>$130</strong>
+              </article>
+              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="Quesadilla">
+                <h3>Quesadilla</h3>
+                <p>Tortilla de maiz hecha a mano con queso de hebra, chorizo o bistec.</p>
+                <strong>$79</strong>
+              </article>
+              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="Bomba">
+                <h3>Bomba</h3>
+                <p>Concha rellena de frijol y queso fresco o mermelada casera.</p>
+                <strong>$44</strong>
+              </article>
+            </div>
+            <p class="menu-empty">No hay resultados con ese filtro.</p>
+          </div>
+
+          <div class="menu-panel" data-menu-panel="otros" role="tabpanel">
+            <ul class="menu-list">
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Sodas"><span>Sodas</span><em>-</em><strong>$43</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="TopoChico"><span>TopoChico</span><em>-</em><strong>$35</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Coca Cola"><span>Coca Cola</span><em>-</em><strong>$36</strong></li>
+            </ul>
+            <p class="menu-empty">No hay resultados con ese filtro.</p>
+          </div>
         </div>
       </section>
 

@@ -348,7 +348,7 @@ h3 {
 
 .space-gallery img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 0.95rem;
   border: 1px solid rgba(44, 10, 4, 0.08);
@@ -434,53 +434,167 @@ h3 {
   font-size: clamp(1.8rem, 4vw, 3rem);
 }
 
-.menu-rail {
+.menu-ui {
+  border-radius: 1.3rem;
+  border: 1px solid rgba(44, 10, 4, 0.1);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 0.9rem;
+}
+
+.menu-tabs {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(220px, 1fr);
+  grid-auto-columns: minmax(130px, 1fr);
   overflow-x: auto;
-  gap: 0.9rem;
+  gap: 0.55rem;
   padding-bottom: 0.25rem;
-  scroll-snap-type: x mandatory;
 }
 
-.menu-card {
-  scroll-snap-align: start;
-  border-radius: 1.2rem;
-  padding: 1.15rem;
+.menu-tab {
+  border: 1px solid rgba(128, 29, 31, 0.2);
   background: #fff;
-  border: 1px solid rgba(44, 10, 4, 0.1);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.menu-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 26px rgba(44, 10, 4, 0.11);
-}
-
-.menu-card h3 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.menu-card p {
-  margin: 0.35rem 0 0.9rem;
-  color: rgba(44, 10, 4, 0.72);
-}
-
-.menu-card span {
   color: var(--bull);
-  font-weight: 700;
+  border-radius: 999px;
+  min-height: 2.4rem;
+  font-weight: 600;
+  font-family: var(--body);
+  cursor: pointer;
+  padding: 0.45rem 0.9rem;
 }
 
-.card-accent {
-  background: linear-gradient(165deg, rgba(28, 89, 76, 0.97), rgba(18, 63, 54, 1));
+.menu-tab.is-active {
+  background: var(--bull);
+  border-color: var(--bull);
   color: var(--beige);
 }
 
-.card-accent p,
-.card-accent span {
-  color: rgba(255, 247, 227, 0.94);
+.menu-tools {
+  margin-top: 0.65rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.65rem;
+}
+
+.menu-tools input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(44, 10, 4, 0.18);
+  padding: 0.7rem 0.8rem;
+  font-family: var(--body);
+}
+
+.menu-filters {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.menu-filter {
+  border: 1px solid rgba(128, 29, 31, 0.2);
+  background: #fff;
+  color: var(--bull);
+  border-radius: 999px;
+  min-height: 2.2rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  font-family: var(--body);
+  cursor: pointer;
+  padding: 0.36rem 0.7rem;
+}
+
+.menu-filter.is-active {
+  background: rgba(128, 29, 31, 0.12);
+  border-color: rgba(128, 29, 31, 0.35);
+}
+
+.menu-panel {
+  margin-top: 0.75rem;
+  display: none;
+}
+
+.menu-panel.is-active {
+  display: block;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  border: 1px solid rgba(44, 10, 4, 0.08);
+}
+
+.menu-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.78rem 0.9rem;
+  background: #fff;
+  border-bottom: 1px solid rgba(44, 10, 4, 0.08);
+}
+
+.menu-row:last-child {
+  border-bottom: 0;
+}
+
+.menu-row span {
+  font-weight: 600;
+}
+
+.menu-row em {
+  color: rgba(44, 10, 4, 0.62);
+  font-style: normal;
+  font-size: 0.88rem;
+}
+
+.menu-row strong {
+  color: var(--bull);
+  font-size: 1.03rem;
+}
+
+.menu-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.menu-feature-item {
+  border: 1px solid rgba(44, 10, 4, 0.09);
+  border-radius: 0.92rem;
+  background: linear-gradient(165deg, #fff, #fbf4e8 92%);
+  padding: 0.9rem;
+}
+
+.menu-feature-item h3 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.menu-feature-item p {
+  margin: 0.45rem 0 0.7rem;
+  color: rgba(44, 10, 4, 0.72);
+}
+
+.menu-feature-item strong {
+  color: var(--bull);
+  font-size: 1.2rem;
+}
+
+.menu-empty {
+  display: none;
+  margin: 0.8rem 0 0;
+  color: rgba(44, 10, 4, 0.65);
+  font-size: 0.92rem;
+}
+
+.menu-empty.is-visible {
+  display: block;
+}
+
+.is-hidden {
+  display: none !important;
 }
 
 .principles {
@@ -623,6 +737,14 @@ h3 {
   .carousel-track {
     height: clamp(300px, 52vh, 520px);
   }
+
+  .menu-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-feature-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 760px) {
@@ -655,6 +777,21 @@ h3 {
 
   .section-head {
     display: block;
+  }
+
+  .menu-row {
+    grid-template-columns: 1fr auto;
+    gap: 0.45rem 0.9rem;
+  }
+
+  .menu-row em {
+    grid-column: 1 / 2;
+  }
+
+  .menu-row strong {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+    align-self: center;
   }
 
   .site-footer {
