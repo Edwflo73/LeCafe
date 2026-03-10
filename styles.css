@@ -24,6 +24,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -31,6 +32,12 @@ body {
   background: var(--blanco);
   color: var(--tostado);
   line-height: 1.55;
+  overflow-x: hidden;
+}
+
+img,
+iframe {
+  max-width: 100%;
 }
 
 section[id] {
@@ -82,7 +89,9 @@ main,
 
 .main-nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
+  justify-content: center;
 }
 
 .main-nav a {
@@ -212,6 +221,7 @@ h3 {
   color: rgba(44, 10, 4, 0.68);
   text-decoration: none;
   font-weight: 600;
+  text-align: center;
 }
 
 .hero-carousel {
@@ -596,6 +606,7 @@ h3 {
 
 .menu-filters {
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 0.4rem;
   align-items: center;
 }
@@ -776,6 +787,70 @@ h3 {
   color: rgba(44, 10, 4, 0.76);
 }
 
+.contact-hours {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 0.95rem;
+  border: 1px solid rgba(128, 29, 31, 0.14);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.contact-hours strong {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.2rem;
+  color: var(--bull);
+}
+
+.service-status {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.service-status.is-open {
+  color: #1f7a3f;
+}
+
+.service-status.is-closed {
+  color: #b42318;
+}
+
+.contact-hours p + p {
+  margin-top: 0.12rem;
+}
+
+.delivery-note {
+  margin-top: 0.75rem;
+  padding: 0.9rem 1rem;
+  border-radius: 0.95rem;
+  border: 1px solid rgba(44, 10, 4, 0.1);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.92), rgba(247, 239, 223, 0.96));
+}
+
+.delivery-note strong {
+  display: block;
+  color: var(--tostado);
+}
+
+.delivery-note-head {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.35rem;
+}
+
+.delivery-logo {
+  width: auto;
+  height: 1.45rem;
+  flex: 0 0 auto;
+}
+
+.delivery-note p {
+  margin: 0;
+}
+
 .map-link {
   margin-top: 1rem;
 }
@@ -816,13 +891,26 @@ h3 {
   border: 1px solid rgba(44, 10, 4, 0.2);
   padding: 0.78rem 0.88rem;
   font-family: var(--body);
+  font-size: 16px;
   background: #fff;
+}
+
+.contact-form textarea {
+  resize: vertical;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: 2px solid rgba(128, 29, 31, 0.34);
   outline-offset: 1px;
+}
+
+.contact-form .btn {
+  width: 50%;
+  justify-self: center;
+  padding-top: 0.54rem;
+  padding-bottom: 0.54rem;
+  font-size: calc(0.95rem + 3px);
 }
 
 .site-footer {
@@ -847,6 +935,15 @@ h3 {
 }
 
 @media (max-width: 980px) {
+  section[id] {
+    scroll-margin-top: 138px;
+  }
+
+  .site-header {
+    border-radius: 1.15rem;
+    padding: 0.8rem 0.9rem;
+  }
+
   .space-hero {
     grid-template-columns: 1fr;
   }
@@ -876,6 +973,10 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .menu-filters {
+    justify-content: flex-start;
+  }
+
   .menu-feature-grid {
     grid-template-columns: 1fr;
   }
@@ -898,6 +999,15 @@ h3 {
     width: 100%;
     justify-content: center;
     order: 3;
+    gap: 0.6rem 1rem;
+  }
+
+  .main-nav a {
+    font-size: 0.9rem;
+  }
+
+  .btn-outline {
+    width: 100%;
   }
 
   .carousel-track {
@@ -927,6 +1037,13 @@ h3 {
     align-items: flex-start;
   }
 
+  .section-bridge .btn,
+  .explore-story .btn,
+  .map-link,
+  .contact-form .btn {
+    width: 100%;
+  }
+
   .menu-panel-head {
     align-items: flex-start;
     flex-direction: column;
@@ -951,5 +1068,113 @@ h3 {
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 2.4rem;
+  }
+
+  .hero-title-wrap {
+    width: 100%;
+    padding-inline: 0;
+  }
+
+  .hero-title-single-line {
+    white-space: normal;
+    text-wrap: balance;
+    font-size: clamp(2rem, 11vw, 3rem);
+    line-height: 0.94;
+  }
+
+  .slide-overlay {
+    padding: 1rem 0.95rem;
+  }
+
+  .slide-overlay h2 {
+    max-width: 100%;
+    font-size: clamp(1.45rem, 8vw, 2.2rem);
+  }
+
+  .slide-overlay .btn {
+    width: 100%;
+  }
+
+  .space-gallery {
+    grid-auto-columns: minmax(76vw, 1fr);
+  }
+
+  .menu-tab,
+  .menu-filter {
+    min-height: 2.5rem;
+  }
+
+  .menu-tools input {
+    min-height: 2.9rem;
+  }
+
+  .contact {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --page: min(100% - 1rem, 1200px);
+  }
+
+  section[id] {
+    scroll-margin-top: 154px;
+  }
+
+  .site-header {
+    top: 0.3rem;
+    padding: 0.7rem 0.75rem;
+  }
+
+  .logo-img--header {
+    width: clamp(145px, 44vw, 185px);
+  }
+
+  .main-nav {
+    gap: 0.45rem 0.8rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .carousel-controls {
+    gap: 0.45rem;
+  }
+
+  .carousel-btn {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+
+  .menu-row {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-row em,
+  .menu-row strong {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .menu-row strong {
+    justify-self: start;
+  }
+
+  .menu-feature-item h3 {
+    font-size: 1.45rem;
+  }
+
+  .contact-copy h2,
+  .explore-story h2,
+  .section-head h2 {
+    line-height: 1;
   }
 }

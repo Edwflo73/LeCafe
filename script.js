@@ -202,3 +202,52 @@ if (menu) {
 
   applyMenuFilters();
 }
+
+const serviceStatus = document.querySelector('[data-service-status]');
+
+if (serviceStatus) {
+  const LOCAL_TIME_ZONE = 'America/Mexico_City';
+  const OPEN_DAYS = new Set([0, 1, 5, 6]);
+  const OPEN_MINUTES = 18 * 60;
+  const CLOSE_MINUTES = 23 * 60;
+  const weekdayMap = {
+    Sun: 0,
+    Mon: 1,
+    Tue: 2,
+    Wed: 3,
+    Thu: 4,
+    Fri: 5,
+    Sat: 6,
+  };
+
+  const localTimeFormatter = new Intl.DateTimeFormat('en-US', {
+    timeZone: LOCAL_TIME_ZONE,
+    weekday: 'short',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  });
+
+  const updateServiceStatus = () => {
+    const now = new Date();
+    const parts = localTimeFormatter.formatToParts(now);
+    const weekday = parts.find((part) => part.type === 'weekday')?.value;
+    const hour = Number(parts.find((part) => part.type === 'hour')?.value || 0);
+    const minute = Number(parts.find((part) => part.type === 'minute')?.value || 0);
+    const dayIndex = weekdayMap[weekday] ?? -1;
+    const currentMinutes = hour * 60 + minute;
+    const isOpen =
+      OPEN_DAYS.has(dayIndex) &&
+      currentMinutes >= OPEN_MINUTES &&
+      currentMinutes < CLOSE_MINUTES;
+
+    serviceStatus.textContent = isOpen
+      ? '(El patio de Le Café está abierto)'
+      : '(El patio de Le Café está cerrado)';
+    serviceStatus.classList.toggle('is-open', isOpen);
+    serviceStatus.classList.toggle('is-closed', !isOpen);
+  };
+
+  updateServiceStatus();
+  window.setInterval(updateServiceStatus, 60000);
+}
