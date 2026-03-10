@@ -36,8 +36,15 @@
     <main>
       <section id="inicio" class="hero reveal">
         <p class="eyebrow">Cafe de especialidad</p>
-        <h1>Vive Le Cafe desde el primer vistazo</h1>
+        <div class="hero-title-wrap">
+          <h1 class="hero-title-single-line">Vive Le Cafe desde el primer vistazo</h1>
+        </div>
         <p class="hero-lead">Patio, cafe de especialidad y momentos para quedarse.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#espacio">Recorrer la experiencia</a>
+          <a class="btn btn-soft" href="#menu">Ir al menu</a>
+        </div>
+        <a class="hero-scroll-link" href="#espacio">Empieza por el patio y sigue bajando</a>
         <div
           class="hero-carousel"
           data-carousel
@@ -128,6 +135,14 @@
           <img src="./assets/patio/img_7817.jpg" alt="Ambiente general de Le Cafe en patio" loading="lazy" />
           <img src="./assets/patio/img_7800.jpg" alt="Zona del patio de Le Cafe para clientes" loading="lazy" />
         </div>
+
+        <div class="section-bridge">
+          <div>
+            <p class="section-bridge-kicker">Siguiente paso</p>
+            <h3>Ya viste el ambiente. Ahora descubre que pedir.</h3>
+          </div>
+          <a class="btn btn-primary" href="#menu">Seguir al menu</a>
+        </div>
       </section>
 
       <section id="menu" class="menu reveal">
@@ -137,16 +152,20 @@
         </div>
 
         <div class="menu-ui" data-menu>
-          <div class="menu-tabs" role="tablist" aria-label="Categorias del menu">
-            <button type="button" class="menu-tab is-active" data-menu-tab="solo" aria-selected="true">Solo aqui</button>
-            <button type="button" class="menu-tab" data-menu-tab="calientes" aria-selected="false">Calientes</button>
-            <button type="button" class="menu-tab" data-menu-tab="frios" aria-selected="false">Frios</button>
-            <button type="button" class="menu-tab" data-menu-tab="alimentos" aria-selected="false">Alimentos</button>
-            <button type="button" class="menu-tab" data-menu-tab="otros" aria-selected="false">Otros</button>
+          <div class="menu-intro">
+            <p>Todo el menu esta visible para que puedas recorrerlo rapido, comparar opciones y decidir sin cambiar de pestaña.</p>
           </div>
 
+          <nav class="menu-tabs" aria-label="Ir a una categoria del menu">
+            <a class="menu-tab" href="#menu-solo">Solo aqui <span>7</span></a>
+            <a class="menu-tab" href="#menu-calientes">Calientes <span>16</span></a>
+            <a class="menu-tab" href="#menu-frios">Frios <span>10</span></a>
+            <a class="menu-tab" href="#menu-alimentos">Alimentos <span>3</span></a>
+            <a class="menu-tab" href="#menu-otros">Otros <span>3</span></a>
+          </nav>
+
           <div class="menu-tools">
-            <input type="search" data-menu-search placeholder="Buscar en el menu..." aria-label="Buscar en el menu" />
+            <input type="search" data-menu-search placeholder="Buscar bebida o alimento..." aria-label="Buscar en el menu" />
             <div class="menu-filters" role="group" aria-label="Filtrar por cafe">
               <button type="button" class="menu-filter is-active" data-menu-filter="all">Todo</button>
               <button type="button" class="menu-filter" data-menu-filter="coffee">Con cafe</button>
@@ -154,7 +173,14 @@
             </div>
           </div>
 
-          <div class="menu-panel is-active" data-menu-panel="solo" role="tabpanel">
+          <section id="menu-solo" class="menu-panel is-active" data-menu-panel="solo" aria-labelledby="menu-heading-solo">
+            <div class="menu-panel-head">
+              <div>
+                <p class="menu-kicker">Especialidades</p>
+                <h3 id="menu-heading-solo">Solo aqui</h3>
+              </div>
+              <span class="menu-count" data-menu-count>7 opciones</span>
+            </div>
             <div class="menu-feature-grid">
               <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="Recuerdo de hogar">
                 <h3>Recuerdo de hogar</h3>
@@ -193,9 +219,16 @@
               </article>
             </div>
             <p class="menu-empty">No hay resultados con ese filtro.</p>
-          </div>
+          </section>
 
-          <div class="menu-panel" data-menu-panel="calientes" role="tabpanel">
+          <section id="menu-calientes" class="menu-panel is-active" data-menu-panel="calientes" aria-labelledby="menu-heading-calientes">
+            <div class="menu-panel-head">
+              <div>
+                <p class="menu-kicker">Clasico</p>
+                <h3 id="menu-heading-calientes">Bebidas calientes</h3>
+              </div>
+              <span class="menu-count" data-menu-count>16 opciones</span>
+            </div>
             <ul class="menu-list">
               <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Espresso"><span>Espresso</span><em>1 oz</em><strong>$20</strong></li>
               <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Espresso doble"><span>Espresso doble</span><em>2 oz</em><strong>$30</strong></li>
@@ -217,9 +250,16 @@
               <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Big Le"><span>Big Le</span><em>16 oz</em><strong>$99</strong></li>
             </ul>
             <p class="menu-empty">No hay resultados con ese filtro.</p>
-          </div>
+          </section>
 
-          <div class="menu-panel" data-menu-panel="frios" role="tabpanel">
+          <section id="menu-frios" class="menu-panel is-active" data-menu-panel="frios" aria-labelledby="menu-heading-frios">
+            <div class="menu-panel-head">
+              <div>
+                <p class="menu-kicker">Refrescantes</p>
+                <h3 id="menu-heading-frios">Bebidas frias</h3>
+              </div>
+              <span class="menu-count" data-menu-count>10 opciones</span>
+            </div>
             <ul class="menu-list">
               <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Iced Americano"><span>Iced Americano</span><em>16 oz</em><strong>$40</strong></li>
               <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Americano Orange"><span>Americano Orange</span><em>16 oz</em><strong>$79</strong></li>
@@ -233,9 +273,16 @@
               <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Te Frio"><span>Te Frio</span><em>16 oz</em><strong>$30</strong></li>
             </ul>
             <p class="menu-empty">No hay resultados con ese filtro.</p>
-          </div>
+          </section>
 
-          <div class="menu-panel" data-menu-panel="alimentos" role="tabpanel">
+          <section id="menu-alimentos" class="menu-panel is-active" data-menu-panel="alimentos" aria-labelledby="menu-heading-alimentos">
+            <div class="menu-panel-head">
+              <div>
+                <p class="menu-kicker">Para acompanar</p>
+                <h3 id="menu-heading-alimentos">Alimentos</h3>
+              </div>
+              <span class="menu-count" data-menu-count>3 opciones</span>
+            </div>
             <div class="menu-feature-grid">
               <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="El Triple Romance">
                 <h3>El Triple Romance</h3>
@@ -254,16 +301,31 @@
               </article>
             </div>
             <p class="menu-empty">No hay resultados con ese filtro.</p>
-          </div>
+          </section>
 
-          <div class="menu-panel" data-menu-panel="otros" role="tabpanel">
+          <section id="menu-otros" class="menu-panel is-active" data-menu-panel="otros" aria-labelledby="menu-heading-otros">
+            <div class="menu-panel-head">
+              <div>
+                <p class="menu-kicker">Complementos</p>
+                <h3 id="menu-heading-otros">Otras bebidas</h3>
+              </div>
+              <span class="menu-count" data-menu-count>3 opciones</span>
+            </div>
             <ul class="menu-list">
               <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Sodas"><span>Sodas</span><em>-</em><strong>$43</strong></li>
               <li class="menu-row" data-menu-item data-has-coffee="no" data-name="TopoChico"><span>TopoChico</span><em>-</em><strong>$35</strong></li>
               <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Coca Cola"><span>Coca Cola</span><em>-</em><strong>$36</strong></li>
             </ul>
             <p class="menu-empty">No hay resultados con ese filtro.</p>
+          </section>
+        </div>
+
+        <div class="section-bridge">
+          <div>
+            <p class="section-bridge-kicker">Despues del menu</p>
+            <h3>Conoce como se vive Le Cafe mas alla de la carta.</h3>
           </div>
+          <a class="btn btn-primary" href="#experiencia">Ver la experiencia</a>
         </div>
       </section>
 
@@ -283,6 +345,15 @@
           <p>Leche cremosa, espresso balanceado y final especiado.</p>
           <strong>$98 MXN</strong>
         </article>
+      </section>
+
+      <section class="explore-story reveal" aria-label="Sigue explorando Le Cafe">
+        <p class="eyebrow">Por que seguir viendo</p>
+        <h2>Lo que sigue te ayuda a decidir si Le Cafe es para tu proxima visita.</h2>
+        <p>
+          Revisa nuestros principios, horarios y ubicacion para cerrar la decision con mas contexto y menos dudas.
+        </p>
+        <a class="btn btn-primary" href="#contacto">Continuar hasta contacto</a>
       </section>
 
       <section class="principles reveal" aria-label="Principios de marca">

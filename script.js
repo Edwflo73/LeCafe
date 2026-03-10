@@ -150,37 +150,18 @@ if (carousel) {
 const menu = document.querySelector('[data-menu]');
 
 if (menu) {
-  const tabs = [...menu.querySelectorAll('[data-menu-tab]')];
   const panels = [...menu.querySelectorAll('[data-menu-panel]')];
   const filters = [...menu.querySelectorAll('[data-menu-filter]')];
   const search = menu.querySelector('[data-menu-search]');
-
-  let activeTab = 'solo';
   let activeFilter = 'all';
-
-  const applyTab = (tabId) => {
-    activeTab = tabId;
-
-    tabs.forEach((tab) => {
-      const isActive = tab.dataset.menuTab === tabId;
-      tab.classList.toggle('is-active', isActive);
-      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-
-    panels.forEach((panel) => {
-      panel.classList.toggle('is-active', panel.dataset.menuPanel === tabId);
-    });
-
-    applyMenuFilters();
-  };
 
   const applyMenuFilters = () => {
     const term = (search?.value || '').trim().toLowerCase();
 
     panels.forEach((panel) => {
-      const isCurrentPanel = panel.dataset.menuPanel === activeTab;
       const items = [...panel.querySelectorAll('[data-menu-item]')];
       const empty = panel.querySelector('.menu-empty');
+      const count = panel.querySelector('[data-menu-count]');
       let visibleCount = 0;
 
       items.forEach((item) => {
@@ -193,7 +174,7 @@ if (menu) {
           (activeFilter === 'coffee' && hasCoffee) ||
           (activeFilter === 'nocoffee' && !hasCoffee);
 
-        const visible = isCurrentPanel && matchesSearch && matchesFilter;
+        const visible = matchesSearch && matchesFilter;
         item.classList.toggle('is-hidden', !visible);
 
         if (visible) {
@@ -201,13 +182,13 @@ if (menu) {
         }
       });
 
-      empty?.classList.toggle('is-visible', isCurrentPanel && visibleCount === 0);
+      empty?.classList.toggle('is-visible', visibleCount === 0);
+
+      if (count) {
+        count.textContent = `${visibleCount} ${visibleCount === 1 ? 'opcion' : 'opciones'}`;
+      }
     });
   };
-
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', () => applyTab(tab.dataset.menuTab));
-  });
 
   filters.forEach((filter) => {
     filter.addEventListener('click', () => {
@@ -219,5 +200,5 @@ if (menu) {
 
   search?.addEventListener('input', applyMenuFilters);
 
-  applyTab(activeTab);
+  applyMenuFilters();
 }
