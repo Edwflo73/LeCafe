@@ -1,27 +1,19 @@
 const sections = document.querySelectorAll('.reveal');
-const shouldDisableReveal = window.matchMedia('(max-width: 980px), (pointer: coarse)').matches;
 
-if (shouldDisableReveal || !('IntersectionObserver' in window)) {
-  sections.forEach((section) => section.classList.add('in'));
-} else {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-        entry.target.classList.add('in');
-        observer.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: 0.05,
-      rootMargin: '0px 0px -8% 0px',
-    }
-  );
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+      entry.target.classList.add('in');
+      observer.unobserve(entry.target);
+    });
+  },
+  { threshold: 0.16 }
+);
 
-  sections.forEach((section) => observer.observe(section));
-}
+sections.forEach((section) => observer.observe(section));
 
 const carousel = document.querySelector('[data-carousel]');
 
