@@ -6,7 +6,7 @@
     <title>Le Cafe - Cafe de especialidad</title>
     <meta
       name="description"
-      content="Le Cafe: cafe de especialidad con granos seleccionados, tostado artesanal y una experiencia minimalista."
+      content="Le Cafe: cafe de especialidad con granos seleccionados, tostado artesanal y un patio para disfrutar sin prisa."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +27,6 @@
         <a href="#inicio">Inicio</a>
         <a href="#espacio">Espacio</a>
         <a href="#menu">Menu</a>
-        <a href="#experiencia">Experiencia</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <a class="btn btn-outline" href="#contacto">Reservar</a>
@@ -37,21 +36,21 @@
       <section id="inicio" class="hero reveal">
         <p class="eyebrow">Cafe de especialidad</p>
         <div class="hero-title-wrap">
-          <h1 class="hero-title-single-line">Vive Le Cafe desde el primer vistazo</h1>
+          <h1 class="hero-title-single-line">Dale café a los que amas</h1>
         </div>
-        <p class="hero-lead">Patio, cafe de especialidad y momentos para quedarse.</p>
+        <p class="hero-lead">El mejor café de la ciudad</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#espacio">Recorrer la experiencia</a>
+          <a class="btn btn-primary" href="#espacio">Recorrer el patio</a>
           <a class="btn btn-soft" href="#menu">Ir al menu</a>
         </div>
-        <a class="hero-scroll-link" href="#espacio">Empieza por el patio y sigue bajando</a>
+        <a class="hero-scroll-link" href="#espacio">El Café nunca había sido tan delicioso</a>
         <div
           class="hero-carousel"
           data-carousel
           role="region"
           aria-label="Destacados de Le Cafe"
         >
-          <div class="carousel-track" data-carousel-track>
+          <div class="carousel-track">
             <article class="carousel-slide is-active" data-carousel-slide>
               <img
                 src="./assets/patio/carousel-1.jpg"
@@ -108,7 +107,7 @@
       <section id="espacio" class="space reveal" aria-label="El patio de Le Cafe">
         <div class="section-head">
           <p class="eyebrow">El lugar</p>
-          <h2>Un cafe en patio para quedarse</h2>
+          <h2>Bienvenidos al patio de Le Café</h2>
         </div>
 
         <article class="space-hero">
@@ -139,7 +138,7 @@
         <div class="section-bridge">
           <div>
             <p class="section-bridge-kicker">Siguiente paso</p>
-            <h3>Ya viste el ambiente. Ahora descubre que pedir.</h3>
+            <h3>Ya viste el ambiente. Ahora descubre qué pedir.</h3>
           </div>
           <a class="btn btn-primary" href="#menu">Seguir al menu</a>
         </div>
@@ -158,14 +157,15 @@
 
           <nav class="menu-tabs" aria-label="Ir a una categoria del menu">
             <a class="menu-tab" href="#menu-solo">Solo aqui <span>7</span></a>
-            <a class="menu-tab" href="#menu-calientes">Calientes <span>16</span></a>
+            <a class="menu-tab" href="#menu-calientes">Calientes <span>18</span></a>
             <a class="menu-tab" href="#menu-frios">Frios <span>10</span></a>
             <a class="menu-tab" href="#menu-alimentos">Alimentos <span>3</span></a>
             <a class="menu-tab" href="#menu-otros">Otros <span>3</span></a>
+            <a class="menu-tab" href="#menu-bolsa">Cafe en bolsa <span>4</span></a>
           </nav>
 
           <div class="menu-tools">
-            <input type="search" data-menu-search placeholder="Buscar bebida o alimento..." aria-label="Buscar en el menu" />
+            <input type="search" data-menu-search placeholder="Buscar bebida, alimento o cafe..." aria-label="Buscar en el menu" />
             <div class="menu-filters" role="group" aria-label="Filtrar por cafe">
               <button type="button" class="menu-filter is-active" data-menu-filter="all">Todo</button>
               <button type="button" class="menu-filter" data-menu-filter="coffee">Con cafe</button>
@@ -173,7 +173,7 @@
             </div>
           </div>
 
-          <section id="menu-solo" class="menu-panel is-active" data-menu-panel="solo" aria-labelledby="menu-heading-solo">
+          <section id="menu-solo" class="menu-panel" data-menu-panel="solo" aria-labelledby="menu-heading-solo">
             <div class="menu-panel-head">
               <div>
                 <p class="menu-kicker">Especialidades</p>
@@ -181,53 +181,67 @@
               </div>
               <span class="menu-count" data-menu-count>7 opciones</span>
             </div>
-            <div class="menu-feature-grid">
-              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="Recuerdo de hogar">
-                <h3>Recuerdo de hogar</h3>
-                <p>Chocolate caliente 100% cacao natural acompanado de pan de concha tradicional.</p>
+            <ul class="menu-list">
+              <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="no" data-name="Recuerdo de hogar">
+                <div class="menu-row-main">
+                  <div class="menu-row-head"><span>Recuerdo de hogar</span><em>Especial</em></div>
+                  <p>Chocolate caliente 100% cacao natural acompanado de pan de concha tradicional.</p>
+                </div>
                 <strong>$65</strong>
-              </article>
-              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="Cocotazo">
-                <h3>Cocotazo</h3>
-                <p>Atole de coco natural con ralladura fina de coco. Cremoso, dulce y reconfortante.</p>
+              </li>
+              <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="no" data-name="Cocotazo">
+                <div class="menu-row-main">
+                  <div class="menu-row-head"><span>Cocotazo</span><em>Especial</em></div>
+                  <p>Atole de coco natural con ralladura fina de coco. Cremoso, dulce y reconfortante.</p>
+                </div>
                 <strong>$45</strong>
-              </article>
-              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="Tierra Viva">
-                <h3>Tierra Viva</h3>
-                <p>Mezcla de naranja, toronja, limon y tamarindo con agua mineral. 100% natural.</p>
+              </li>
+              <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="no" data-name="Tierra Viva">
+                <div class="menu-row-main">
+                  <div class="menu-row-head"><span>Tierra Viva</span><em>Especial</em></div>
+                  <p>Mezcla de naranja, toronja, limon y tamarindo con agua mineral. 100% natural.</p>
+                </div>
                 <strong>$69</strong>
-              </article>
-              <article class="menu-feature-item" data-menu-item data-has-coffee="yes" data-name="Dulce Desvelo">
-                <h3>Dulce Desvelo</h3>
-                <p>Agua de horchata casera de arroz con un toque de cafe y canela ahumada.</p>
+              </li>
+              <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="yes" data-name="Dulce Desvelo">
+                <div class="menu-row-main">
+                  <div class="menu-row-head"><span>Dulce Desvelo</span><em>Con cafe</em></div>
+                  <p>Agua de horchata casera de arroz con un toque de cafe y canela ahumada.</p>
+                </div>
                 <strong>$69</strong>
-              </article>
-              <article class="menu-feature-item" data-menu-item data-has-coffee="yes" data-name="Carajillo">
-                <h3>Carajillo!</h3>
-                <p>Con leche o sin ella, sin alcohol y con caracter. Perfil limpio y elegante.</p>
+              </li>
+              <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="yes" data-name="Carajillo">
+                <div class="menu-row-main">
+                  <div class="menu-row-head"><span>Carajillo!</span><em>Con cafe</em></div>
+                  <p>Con leche o sin ella, sin alcohol y con caracter. Perfil limpio y elegante.</p>
+                </div>
                 <strong>$69</strong>
-              </article>
-              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="PepiJal">
-                <h3>PepiJal</h3>
-                <p>Pepino, limon y jalapeno. Refrescante, atrevido y con un toque de picor.</p>
+              </li>
+              <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="no" data-name="PepiJal">
+                <div class="menu-row-main">
+                  <div class="menu-row-head"><span>PepiJal</span><em>Especial</em></div>
+                  <p>Pepino, limon y jalapeno. Refrescante, atrevido y con un toque de picor.</p>
+                </div>
                 <strong>$64</strong>
-              </article>
-              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="Las Chulas">
-                <h3>Las Chulas</h3>
-                <p>Limonadas y naranjadas con jugo natural. Dulces, citricas y sabrosas.</p>
+              </li>
+              <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="no" data-name="Las Chulas">
+                <div class="menu-row-main">
+                  <div class="menu-row-head"><span>Las Chulas</span><em>Especial</em></div>
+                  <p>Limonadas y naranjadas con jugo natural. Dulces, citricas y sabrosas.</p>
+                </div>
                 <strong>$45</strong>
-              </article>
-            </div>
+              </li>
+            </ul>
             <p class="menu-empty">No hay resultados con ese filtro.</p>
           </section>
 
-          <section id="menu-calientes" class="menu-panel is-active" data-menu-panel="calientes" aria-labelledby="menu-heading-calientes">
+          <section id="menu-calientes" class="menu-panel" data-menu-panel="calientes" aria-labelledby="menu-heading-calientes">
             <div class="menu-panel-head">
               <div>
                 <p class="menu-kicker">Clasico</p>
                 <h3 id="menu-heading-calientes">Bebidas calientes</h3>
               </div>
-              <span class="menu-count" data-menu-count>16 opciones</span>
+              <span class="menu-count" data-menu-count>18 opciones</span>
             </div>
             <ul class="menu-list">
               <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Espresso"><span>Espresso</span><em>1 oz</em><strong>$20</strong></li>
@@ -252,7 +266,7 @@
             <p class="menu-empty">No hay resultados con ese filtro.</p>
           </section>
 
-          <section id="menu-frios" class="menu-panel is-active" data-menu-panel="frios" aria-labelledby="menu-heading-frios">
+          <section id="menu-frios" class="menu-panel" data-menu-panel="frios" aria-labelledby="menu-heading-frios">
             <div class="menu-panel-head">
               <div>
                 <p class="menu-kicker">Refrescantes</p>
@@ -275,7 +289,7 @@
             <p class="menu-empty">No hay resultados con ese filtro.</p>
           </section>
 
-          <section id="menu-alimentos" class="menu-panel is-active" data-menu-panel="alimentos" aria-labelledby="menu-heading-alimentos">
+          <section id="menu-alimentos" class="menu-panel" data-menu-panel="alimentos" aria-labelledby="menu-heading-alimentos">
             <div class="menu-panel-head">
               <div>
                 <p class="menu-kicker">Para acompanar</p>
@@ -283,27 +297,33 @@
               </div>
               <span class="menu-count" data-menu-count>3 opciones</span>
             </div>
-            <div class="menu-feature-grid">
-              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="El Triple Romance">
-                <h3>El Triple Romance</h3>
-                <p>Tres capas de pan doradito con jamon de pavo, queso y toque casero.</p>
+            <ul class="menu-list">
+              <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="no" data-name="El Triple Romance">
+                <div class="menu-row-main">
+                  <div class="menu-row-head"><span>El Triple Romance</span><em>Alimento</em></div>
+                  <p>Tres capas de pan doradito con jamón de pavo, queso y el toque casero.</p>
+                </div>
                 <strong>$130</strong>
-              </article>
-              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="Quesadilla">
-                <h3>Quesadilla</h3>
-                <p>Tortilla de maiz hecha a mano con queso de hebra, chorizo o bistec.</p>
+              </li>
+              <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="no" data-name="Quesadilla">
+                <div class="menu-row-main">
+                  <div class="menu-row-head"><span>Quesadilla</span><em>Alimento</em></div>
+                  <p>Tortilla de maiz hecha a mano con queso de hebra, chorizo o bistec.</p>
+                </div>
                 <strong>$79</strong>
-              </article>
-              <article class="menu-feature-item" data-menu-item data-has-coffee="no" data-name="Bomba">
-                <h3>Bomba</h3>
-                <p>Concha rellena de frijol y queso fresco o mermelada casera.</p>
+              </li>
+              <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="no" data-name="Bomba">
+                <div class="menu-row-main">
+                  <div class="menu-row-head"><span>Bomba</span><em>Alimento</em></div>
+                  <p>Concha rellena de frijol y queso fresco o mermelada casera.</p>
+                </div>
                 <strong>$44</strong>
-              </article>
-            </div>
+              </li>
+            </ul>
             <p class="menu-empty">No hay resultados con ese filtro.</p>
           </section>
 
-          <section id="menu-otros" class="menu-panel is-active" data-menu-panel="otros" aria-labelledby="menu-heading-otros">
+          <section id="menu-otros" class="menu-panel" data-menu-panel="otros" aria-labelledby="menu-heading-otros">
             <div class="menu-panel-head">
               <div>
                 <p class="menu-kicker">Complementos</p>
@@ -318,42 +338,81 @@
             </ul>
             <p class="menu-empty">No hay resultados con ese filtro.</p>
           </section>
+
+          <section id="menu-bolsa" class="menu-panel" data-menu-panel="bolsa" aria-labelledby="menu-heading-bolsa">
+            <div class="menu-panel-head">
+              <div>
+                <p class="menu-kicker">Para llevar</p>
+                <h3 id="menu-heading-bolsa">Cafe en bolsa</h3>
+              </div>
+              <span class="menu-count" data-menu-count>4 opciones</span>
+            </div>
+            <p class="menu-panel-note">Disponible molido o en grano, segun como prefieras prepararlo en casa.</p>
+            <ul class="menu-list">
+              <li class="menu-row menu-row-rich menu-row-multi" data-menu-item data-has-coffee="yes" data-name="Valle de Soreq">
+                <div class="menu-row-main">
+                  <div class="menu-row-head"><span>Valle de Soreq</span><em>Coatepec, Veracruz</em></div>
+                  <div class="menu-row-tags">
+                    <span>Molido o en grano</span>
+                    <span>Tueste alto</span>
+                  </div>
+                  <p>Chocolate, cacao amargo moderado, caramelo y poca acidez. Cuerpo denso y pesado.</p>
+                </div>
+                <div class="menu-price-stack">
+                  <strong>1 kg · $340</strong>
+                  <em>Mayoreo desde 9 kg</em>
+                </div>
+              </li>
+              <li class="menu-row menu-row-rich menu-row-multi" data-menu-item data-has-coffee="yes" data-name="Valle de Escol">
+                <div class="menu-row-main">
+                  <div class="menu-row-head"><span>Valle de Escol</span><em>Ixhuacan de los Reyes, Veracruz</em></div>
+                  <div class="menu-row-tags">
+                    <span>Molido o en grano</span>
+                    <span>SCA 83.75</span>
+                  </div>
+                  <p>Azucar moscada, chocolate con leche y naranja. Cuerpo alto y cremoso con postgusto de macadamia.</p>
+                </div>
+                <div class="menu-price-stack">
+                  <strong>250 g · $220</strong>
+                  <strong>500 g · $370</strong>
+                  <strong>1 kg · $710</strong>
+                </div>
+              </li>
+              <li class="menu-row menu-row-rich menu-row-multi" data-menu-item data-has-coffee="yes" data-name="Monte Ararat">
+                <div class="menu-row-main">
+                  <div class="menu-row-head"><span>Monte Ararat</span><em>Guerrero</em></div>
+                  <div class="menu-row-tags">
+                    <span>Molido o en grano</span>
+                    <span>Typica y Bourbon</span>
+                  </div>
+                  <p>Chocolate, nuez y azucar. En taza salen chocolate con leche, manzana verde, uva y fresas.</p>
+                </div>
+                <div class="menu-price-stack">
+                  <strong>250 g · $199</strong>
+                  <strong>500 g · $319</strong>
+                  <strong>1 kg · $599</strong>
+                </div>
+              </li>
+              <li class="menu-row menu-row-rich menu-row-multi" data-menu-item data-has-coffee="yes" data-name="El Paraiso">
+                <div class="menu-row-main">
+                  <div class="menu-row-head"><span>El Paraiso</span><em>Oaxaca</em></div>
+                  <div class="menu-row-tags">
+                    <span>Molido o en grano</span>
+                    <span>Typica, Bourbon, Caturra y Mundo Novo</span>
+                  </div>
+                  <p>Pasas, chocolate amargo, dulce de leche y nueces. Sabor a almendra, melocoton, miel, citricos y especias.</p>
+                </div>
+                <div class="menu-price-stack">
+                  <strong>250 g · $199</strong>
+                  <strong>500 g · $300</strong>
+                  <strong>1 kg · $599</strong>
+                </div>
+              </li>
+            </ul>
+            <p class="menu-empty">No hay resultados con ese filtro.</p>
+          </section>
         </div>
 
-        <div class="section-bridge">
-          <div>
-            <p class="section-bridge-kicker">Despues del menu</p>
-            <h3>Conoce como se vive Le Cafe mas alla de la carta.</h3>
-          </div>
-          <a class="btn btn-primary" href="#experiencia">Ver la experiencia</a>
-        </div>
-      </section>
-
-      <section id="experiencia" class="experience reveal">
-        <article class="panel panel-light">
-          <p class="eyebrow">Nuestra propuesta</p>
-          <h2>Un servicio cercano con estandar de especialidad</h2>
-          <p>
-            Desde que llegas al patio hasta el ultimo sorbo, buscamos una
-            experiencia clara, calida y consistente en cada visita.
-          </p>
-        </article>
-
-        <article class="panel panel-dark">
-          <p class="eyebrow">Signature</p>
-          <h3>Latte Dorado</h3>
-          <p>Leche cremosa, espresso balanceado y final especiado.</p>
-          <strong>$98 MXN</strong>
-        </article>
-      </section>
-
-      <section class="explore-story reveal" aria-label="Sigue explorando Le Cafe">
-        <p class="eyebrow">Por que seguir viendo</p>
-        <h2>Lo que sigue te ayuda a decidir si Le Cafe es para tu proxima visita.</h2>
-        <p>
-          Revisa nuestros principios, horarios y ubicacion para cerrar la decision con mas contexto y menos dudas.
-        </p>
-        <a class="btn btn-primary" href="#contacto">Continuar hasta contacto</a>
       </section>
 
       <section class="principles reveal" aria-label="Principios de marca">
