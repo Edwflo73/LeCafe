@@ -1229,6 +1229,34 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  /* Safari iOS can fail to repaint the menu content in portrait when
+     rounded panels, nested scroll areas and grid children stack together. */
+  .menu,
+  .menu-ui,
+  .menu-panel,
+  .menu-list,
+  .menu-row,
+  .menu-tools,
+  .menu-tabs,
+  .menu-filters {
+    position: relative;
+    opacity: 1 !important;
+    visibility: visible !important;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .menu-ui {
+    isolation: isolate;
+    background: #fff;
+  }
+
+  .menu-list {
+    overflow: visible;
+  }
+
   .menu-row em,
   .menu-row strong {
     grid-column: auto;
