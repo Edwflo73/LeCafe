@@ -211,11 +211,9 @@ if (menu) {
   applyMenuFilters();
 }
 
-const serviceStatusNodes = [
-  ...document.querySelectorAll('[data-service-status], [data-service-status-inline]'),
-];
+const serviceStatus = document.querySelector('[data-service-status]');
 
-if (serviceStatusNodes.length) {
+if (serviceStatus) {
   const LOCAL_TIME_ZONE = 'America/Mexico_City';
   const OPEN_DAYS = new Set([0, 1, 5, 6]);
   const OPEN_MINUTES = 18 * 60;
@@ -251,20 +249,43 @@ if (serviceStatusNodes.length) {
       currentMinutes >= OPEN_MINUTES &&
       currentMinutes < CLOSE_MINUTES;
 
-    serviceStatusNodes.forEach((node) => {
-      const isInline = node.hasAttribute('data-service-status-inline');
-      node.textContent = isOpen
-        ? isInline
-          ? 'Abierto ahora'
-          : '(El patio de Le Café está abierto)'
-        : isInline
-          ? 'Cerrado ahora'
-          : '(El patio de Le Café está cerrado)';
-      node.classList.toggle('is-open', isOpen);
-      node.classList.toggle('is-closed', !isOpen);
-    });
+    serviceStatus.textContent = isOpen
+      ? '(El patio de Le Café está abierto)'
+      : '(El patio de Le Café está cerrado)';
+    serviceStatus.classList.toggle('is-open', isOpen);
+    serviceStatus.classList.toggle('is-closed', !isOpen);
   };
 
   updateServiceStatus();
   window.setInterval(updateServiceStatus, 60000);
+}
+
+const whatsappForm = document.querySelector('[data-whatsapp-form]');
+
+if (whatsappForm) {
+  whatsappForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(whatsappForm);
+    const nombre = (formData.get('nombre') || '').toString().trim();
+    const fecha = (formData.get('fecha') || '').toString().trim();
+    const hora = (formData.get('hora') || '').toString().trim();
+    const personas = (formData.get('personas') || '').toString().trim();
+    const mensaje = (formData.get('mensaje') || '').toString().trim();
+
+    const lines = [
+      'Hola, quiero reservar en Le Cafe.',
+      `Nombre: ${nombre}`,
+      `Fecha: ${fecha}`,
+      `Hora: ${hora}`,
+      `Personas: ${personas}`,
+    ];
+
+    if (mensaje) {
+      lines.push(`Mensaje: ${mensaje}`);
+    }
+
+    const text = encodeURIComponent(lines.join('\n'));
+    window.open(`https://wa.me/522294334031?text=${text}`, '_blank', 'noopener');
+  });
 }
