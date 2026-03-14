@@ -211,9 +211,11 @@ if (menu) {
   applyMenuFilters();
 }
 
-const serviceStatus = document.querySelector('[data-service-status]');
+const serviceStatusNodes = [
+  ...document.querySelectorAll('[data-service-status], [data-service-status-inline]'),
+];
 
-if (serviceStatus) {
+if (serviceStatusNodes.length) {
   const LOCAL_TIME_ZONE = 'America/Mexico_City';
   const OPEN_DAYS = new Set([0, 1, 5, 6]);
   const OPEN_MINUTES = 18 * 60;
@@ -249,11 +251,18 @@ if (serviceStatus) {
       currentMinutes >= OPEN_MINUTES &&
       currentMinutes < CLOSE_MINUTES;
 
-    serviceStatus.textContent = isOpen
-      ? '(El patio de Le Café está abierto)'
-      : '(El patio de Le Café está cerrado)';
-    serviceStatus.classList.toggle('is-open', isOpen);
-    serviceStatus.classList.toggle('is-closed', !isOpen);
+    serviceStatusNodes.forEach((node) => {
+      const isInline = node.hasAttribute('data-service-status-inline');
+      node.textContent = isOpen
+        ? isInline
+          ? 'Abierto ahora'
+          : '(El patio de Le Café está abierto)'
+        : isInline
+          ? 'Cerrado ahora'
+          : '(El patio de Le Café está cerrado)';
+      node.classList.toggle('is-open', isOpen);
+      node.classList.toggle('is-closed', !isOpen);
+    });
   };
 
   updateServiceStatus();
