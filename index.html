@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me; frame-ancestors 'self'; upgrade-insecure-requests"
+    />
     <title>Le Cafe - Cafe de especialidad</title>
     <meta
       name="description"
@@ -36,14 +40,14 @@
       <section id="inicio" class="hero reveal">
         <p class="eyebrow">Cafe de especialidad</p>
         <div class="hero-title-wrap">
-          <h1 class="hero-title-single-line">Dale café a los que amas</h1>
+          <h1 class="hero-title-single-line">Café de especialidad y patio para disfrutar sin prisa</h1>
         </div>
-        <p class="hero-lead">El mejor café de la ciudad</p>
+        <p class="hero-lead">Tostado artesanal, bebidas bien hechas y un espacio para quedarte</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#espacio">Recorrer el patio</a>
-          <a class="btn btn-soft" href="#menu">Ir al menu</a>
+          <a class="btn btn-primary" href="#espacio">Descubrir el patio</a>
+          <a class="btn btn-soft" href="#menu">Ver el menú</a>
         </div>
-        <a class="hero-scroll-link" href="#espacio">El Café nunca había sido tan delicioso</a>
+        <a class="hero-scroll-link" href="#espacio">Mira cómo se vive Le Café</a>
         <div
           class="hero-carousel"
           data-carousel
@@ -58,8 +62,8 @@
                 loading="eager"
               />
               <div class="slide-overlay">
-                <p class="eyebrow">El patio Le Cafe</p>
-                <h2>Un espacio abierto para disfrutar sin prisa</h2>
+                <p class="eyebrow">Nuestro patio</p>
+                <h2>Mesas al aire libre, calma y café bien hecho</h2>
                 <a class="btn btn-primary" href="#espacio">Explorar el patio</a>
               </div>
             </article>
@@ -71,8 +75,8 @@
               />
               <div class="slide-overlay">
                 <p class="eyebrow">Cafe de especialidad</p>
-                <h2>Extraccion precisa en cada taza</h2>
-                <a class="btn btn-primary" href="#menu">Ver menu</a>
+                <h2>Café bien hecho, de principio a fin</h2>
+                <a class="btn btn-primary" href="#menu">Ver el menú</a>
               </div>
             </article>
             <article class="carousel-slide" data-carousel-slide>
@@ -83,8 +87,8 @@
               />
               <div class="slide-overlay">
                 <p class="eyebrow">Visitanos hoy</p>
-                <h2>Estamos en Boca del Rio, Veracruz</h2>
-                <a class="btn btn-primary" href="#contacto">Como llegar</a>
+                <h2>Tu próxima parada de café en Boca del Río</h2>
+                <a class="btn btn-primary" href="#contacto">Cómo llegar</a>
               </div>
             </article>
           </div>
@@ -106,8 +110,8 @@
 
       <section id="espacio" class="space reveal" aria-label="El patio de Le Cafe">
         <div class="section-head">
-          <p class="eyebrow">El lugar</p>
-          <h2>Bienvenidos al patio de Le Café</h2>
+          <p class="eyebrow">Nuestro rincón</p>
+          <h2>Un patio para bajar el ritmo y disfrutar el café</h2>
         </div>
 
         <article class="space-hero">
@@ -120,8 +124,7 @@
             <p class="eyebrow">Ambiente Le Cafe</p>
             <h3>Luz natural, vegetacion y calma</h3>
             <p>
-              Queremos que cada cliente pueda visualizar la experiencia del patio:
-              mesas al aire libre, vegetacion y una atmosfera relajada.
+              Mesas al aire libre, vegetación y una atmósfera relajada para conversar, trabajar o simplemente hacer una pausa.
             </p>
           </div>
         </article>
@@ -137,35 +140,35 @@
 
         <div class="section-bridge">
           <div>
-            <p class="section-bridge-kicker">Siguiente paso</p>
+            <p class="section-bridge-kicker">¿Y ahora qué se antoja?</p>
             <h3>Ya viste el ambiente. Ahora descubre qué pedir.</h3>
           </div>
-          <a class="btn btn-primary" href="#menu">Seguir al menu</a>
+          <a class="btn btn-primary" href="#menu">Ver el menú</a>
         </div>
       </section>
 
       <section id="menu" class="menu reveal">
         <div class="section-head">
           <p class="eyebrow">Menu completo</p>
-          <h2>Encuentra tu bebida ideal</h2>
+          <h2>Encuentra qué pedir</h2>
         </div>
 
         <div class="menu-ui" data-menu>
           <div class="menu-intro">
-            <p>Todo el menu esta visible para que puedas recorrerlo rapido, comparar opciones y decidir sin cambiar de pestaña.</p>
+            <p>Explora bebidas, alimentos y café en grano en un solo lugar.</p>
           </div>
 
           <nav class="menu-tabs" aria-label="Ir a una categoria del menu">
-            <a class="menu-tab" href="#menu-solo">Solo aqui <span>7</span></a>
-            <a class="menu-tab" href="#menu-calientes">Calientes <span>18</span></a>
-            <a class="menu-tab" href="#menu-frios">Frios <span>10</span></a>
+            <a class="menu-tab" href="#menu-solo">Especialidades de la casa <span>7</span></a>
+            <a class="menu-tab" href="#menu-calientes">Bebidas calientes <span>18</span></a>
+            <a class="menu-tab" href="#menu-frios">Bebidas frías <span>10</span></a>
             <a class="menu-tab" href="#menu-alimentos">Alimentos <span>3</span></a>
-            <a class="menu-tab" href="#menu-otros">Otros <span>3</span></a>
-            <a class="menu-tab" href="#menu-bolsa">Cafe en bolsa <span>4</span></a>
+            <a class="menu-tab" href="#menu-otros">Otras bebidas <span>3</span></a>
+            <a class="menu-tab" href="#menu-bolsa">Café para llevar a casa <span>4</span></a>
           </nav>
 
           <div class="menu-tools">
-            <input type="search" data-menu-search placeholder="Buscar bebida, alimento o cafe..." aria-label="Buscar en el menu" />
+            <input type="search" data-menu-search placeholder="Busca por nombre, ingrediente o categoría" aria-label="Buscar en el menu" />
             <div class="menu-filters" role="group" aria-label="Filtrar por cafe">
               <button type="button" class="menu-filter is-active" data-menu-filter="all">Todo</button>
               <button type="button" class="menu-filter" data-menu-filter="coffee">Con cafe</button>
@@ -177,7 +180,7 @@
             <div class="menu-panel-head">
               <div>
                 <p class="menu-kicker">Especialidades</p>
-                <h3 id="menu-heading-solo">Solo aqui</h3>
+                <h3 id="menu-heading-solo">Especialidades de la casa</h3>
               </div>
               <span class="menu-count" data-menu-count>7 opciones</span>
             </div>
@@ -232,13 +235,13 @@
                 <strong>$45</strong>
               </li>
             </ul>
-            <p class="menu-empty">No hay resultados con ese filtro.</p>
+            <p class="menu-empty">No encontramos resultados. Prueba con otra búsqueda o cambia el filtro.</p>
           </section>
 
           <section id="menu-calientes" class="menu-panel" data-menu-panel="calientes" aria-labelledby="menu-heading-calientes">
             <div class="menu-panel-head">
               <div>
-                <p class="menu-kicker">Clasico</p>
+                <p class="menu-kicker">Favoritos clásicos</p>
                 <h3 id="menu-heading-calientes">Bebidas calientes</h3>
               </div>
               <span class="menu-count" data-menu-count>18 opciones</span>
@@ -263,7 +266,7 @@
               <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="By Le Le"><span>By Le Le</span><em>12 oz</em><strong>$92</strong></li>
               <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Big Le"><span>Big Le</span><em>16 oz</em><strong>$99</strong></li>
             </ul>
-            <p class="menu-empty">No hay resultados con ese filtro.</p>
+            <p class="menu-empty">No encontramos resultados. Prueba con otra búsqueda o cambia el filtro.</p>
           </section>
 
           <section id="menu-frios" class="menu-panel" data-menu-panel="frios" aria-labelledby="menu-heading-frios">
@@ -286,13 +289,13 @@
               <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Matcha Frio"><span>Matcha Frio</span><em>16 oz</em><strong>$79</strong></li>
               <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Te Frio"><span>Te Frio</span><em>16 oz</em><strong>$30</strong></li>
             </ul>
-            <p class="menu-empty">No hay resultados con ese filtro.</p>
+            <p class="menu-empty">No encontramos resultados. Prueba con otra búsqueda o cambia el filtro.</p>
           </section>
 
           <section id="menu-alimentos" class="menu-panel" data-menu-panel="alimentos" aria-labelledby="menu-heading-alimentos">
             <div class="menu-panel-head">
               <div>
-                <p class="menu-kicker">Para acompanar</p>
+                <p class="menu-kicker">Para acompañar tu café</p>
                 <h3 id="menu-heading-alimentos">Alimentos</h3>
               </div>
               <span class="menu-count" data-menu-count>3 opciones</span>
@@ -320,13 +323,13 @@
                 <strong>$44</strong>
               </li>
             </ul>
-            <p class="menu-empty">No hay resultados con ese filtro.</p>
+            <p class="menu-empty">No encontramos resultados. Prueba con otra búsqueda o cambia el filtro.</p>
           </section>
 
           <section id="menu-otros" class="menu-panel" data-menu-panel="otros" aria-labelledby="menu-heading-otros">
             <div class="menu-panel-head">
               <div>
-                <p class="menu-kicker">Complementos</p>
+                <p class="menu-kicker">Para sumar al antojo</p>
                 <h3 id="menu-heading-otros">Otras bebidas</h3>
               </div>
               <span class="menu-count" data-menu-count>3 opciones</span>
@@ -336,18 +339,18 @@
               <li class="menu-row" data-menu-item data-has-coffee="no" data-name="TopoChico"><span>TopoChico</span><em>-</em><strong>$35</strong></li>
               <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Coca Cola"><span>Coca Cola</span><em>-</em><strong>$36</strong></li>
             </ul>
-            <p class="menu-empty">No hay resultados con ese filtro.</p>
+            <p class="menu-empty">No encontramos resultados. Prueba con otra búsqueda o cambia el filtro.</p>
           </section>
 
           <section id="menu-bolsa" class="menu-panel" data-menu-panel="bolsa" aria-labelledby="menu-heading-bolsa">
             <div class="menu-panel-head">
               <div>
                 <p class="menu-kicker">Para llevar</p>
-                <h3 id="menu-heading-bolsa">Cafe en bolsa</h3>
+                <h3 id="menu-heading-bolsa">Café para llevar a casa</h3>
               </div>
               <span class="menu-count" data-menu-count>4 opciones</span>
             </div>
-            <p class="menu-panel-note">Disponible molido o en grano, segun como prefieras prepararlo en casa.</p>
+            <p class="menu-panel-note">Te lo llevas molido o en grano, listo para prepararlo como más te gusta.</p>
             <ul class="menu-list">
               <li class="menu-row menu-row-rich menu-row-multi" data-menu-item data-has-coffee="yes" data-name="Valle de Soreq">
                 <div class="menu-row-main">
@@ -409,7 +412,7 @@
                 </div>
               </li>
             </ul>
-            <p class="menu-empty">No hay resultados con ese filtro.</p>
+            <p class="menu-empty">No encontramos resultados. Prueba con otra búsqueda o cambia el filtro.</p>
           </section>
         </div>
 
@@ -417,16 +420,16 @@
 
       <section class="principles reveal" aria-label="Principios de marca">
         <article>
-          <h3>Ambiente relajado</h3>
+          <h3>Un lugar para bajar el ritmo</h3>
           <p>El patio esta pensado para conversar, trabajar o simplemente pausar.</p>
         </article>
         <article>
-          <h3>Cafe bien ejecutado</h3>
-          <p>Recetas estandarizadas para mantener sabor y calidad todo el dia.</p>
+          <h3>Café bien hecho</h3>
+          <p>Cuidamos cada preparación para que el sabor y la calidad se mantengan en cada taza.</p>
         </article>
         <article>
-          <h3>Atencion humana</h3>
-          <p>Equipo atento para recomendar metodos y perfiles segun tu gusto.</p>
+          <h3>Te guiamos según tu gusto</h3>
+          <p>Estamos para ayudarte a elegir el café o la bebida que más se te antoje.</p>
         </article>
       </section>
 
@@ -436,8 +439,8 @@
           <p>6:00 p.m. a 11:00 p.m.</p>
         </article>
         <article>
-          <strong>3 metodos</strong>
-          <p>Espresso, filtro y leche</p>
+          <strong>Tres formas de disfrutarlo</strong>
+          <p>Espresso, filtrados y bebidas con leche</p>
         </article>
         <article>
           <strong>Tostado propio</strong>
@@ -447,8 +450,8 @@
 
       <section id="contacto" class="contact reveal">
         <div class="contact-copy">
-          <p class="eyebrow">Reserva y contacto</p>
-          <h2>Le Cafe, Boca del Rio, Veracruz</h2>
+          <p class="eyebrow">Visítanos o reserva</p>
+          <h2>Te esperamos en Boca del Río, Veracruz</h2>
           <p>Isauro Acosta 311, C.P. 94297, Boca del Rio. Veracruz, Mexico</p>
           <div class="contact-hours" aria-label="Horario de Le Cafe">
             <strong>
@@ -461,9 +464,9 @@
           <div class="delivery-note" aria-label="Entrega a domicilio">
             <div class="delivery-note-head">
               <img class="delivery-logo" src="./assets/logos/rappi.svg" alt="Rappi" loading="lazy" />
-              <strong>Entrega a domicilio</strong>
+              <strong>Pídelo a domicilio</strong>
             </div>
-            <p>Busca 'Le Café' en Rappi y recibe tu pedido donde estés</p>
+            <p>Encuentra Le Café en Rappi y recibe tu pedido donde estés.</p>
           </div>
           <div class="social-links" aria-label="Redes sociales de Le Cafe">
             <a
@@ -506,32 +509,33 @@
               title="Ubicacion de Le Cafe en Google Maps"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
+              sandbox="allow-scripts allow-same-origin allow-popups"
               src="https://www.google.com/maps?q=Isauro%20Acosta%20311%2C%20C.P.%2094297%2C%20Boca%20del%20Rio%2C%20Veracruz%2C%20Mexico&z=11&output=embed"
             ></iframe>
           </div>
         </div>
 
         <form class="contact-form" data-whatsapp-form>
-          <p class="contact-form-intro">Completa estos datos y te llevamos a WhatsApp con la reserva lista para enviar.</p>
+          <p class="contact-form-intro">Completa tus datos y te llevamos a WhatsApp con un mensaje listo para solicitar tu reserva.</p>
           <label>
             Nombre
-            <input type="text" name="nombre" placeholder="Tu nombre" required />
+            <input type="text" name="nombre" placeholder="Tu nombre" maxlength="80" autocomplete="name" required />
           </label>
           <label>
-            Fecha
+            Fecha de reserva
             <input type="date" name="fecha" required />
           </label>
           <label>
-            Hora
+            Hora de reserva
             <input type="time" name="hora" required />
           </label>
           <label>
-            Personas
+            Número de personas
             <input type="number" name="personas" min="1" max="20" placeholder="2" required />
           </label>
           <label>
-            Mensaje adicional
-            <textarea name="mensaje" rows="4" placeholder="Quiero reservar para..." ></textarea>
+            ¿Algo más que quieras contarnos?
+            <textarea name="mensaje" rows="4" placeholder="Quiero reservar para..." maxlength="500"></textarea>
           </label>
           <button class="btn btn-primary" type="submit">Reservar por WhatsApp</button>
         </form>

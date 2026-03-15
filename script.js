@@ -263,15 +263,28 @@ if (serviceStatus) {
 const whatsappForm = document.querySelector('[data-whatsapp-form]');
 
 if (whatsappForm) {
+  const sanitizeField = (value, maxLength) =>
+    value
+      .toString()
+      .replace(/[\u0000-\u001f\u007f]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .slice(0, maxLength);
+
   whatsappForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const formData = new FormData(whatsappForm);
-    const nombre = (formData.get('nombre') || '').toString().trim();
+    const nombre = sanitizeField(formData.get('nombre') || '', 80);
     const fecha = (formData.get('fecha') || '').toString().trim();
     const hora = (formData.get('hora') || '').toString().trim();
-    const personas = (formData.get('personas') || '').toString().trim();
-    const mensaje = (formData.get('mensaje') || '').toString().trim();
+    const personas = Number((formData.get('personas') || '').toString().trim());
+    const mensaje = sanitizeField(formData.get('mensaje') || '', 500);
+
+    if (!nombre || !fecha || !hora || !Number.isInteger(personas) || personas < 1 || personas > 20) {
+      whatsappForm.reportValidity();
+      return;
+    }
 
     const lines = [
       'Hola, quiero reservar en Le Cafe.',
@@ -285,7 +298,8 @@ if (whatsappForm) {
       lines.push(`Mensaje: ${mensaje}`);
     }
 
-    const text = encodeURIComponent(lines.join('\n'));
-    window.open(`https://wa.me/522294334031?text=${text}`, '_blank', 'noopener');
+    const whatsappUrl = new URL('https://wa.me/522294334031');
+    whatsappUrl.searchParams.set('text', lines.join('\n'));
+    window.open(whatsappUrl.toString(), '_blank', 'noopener,noreferrer');
   });
 }
