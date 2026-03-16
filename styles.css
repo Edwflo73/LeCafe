@@ -112,6 +112,18 @@ main,
   color: var(--bull);
 }
 
+.main-nav a:focus-visible,
+.btn:focus-visible,
+.menu-tab:focus-visible,
+.menu-filter:focus-visible,
+.carousel-btn:focus-visible,
+.carousel-dot:focus-visible,
+.social-link:focus-visible,
+.footer-links a:focus-visible {
+  outline: 2px solid rgba(128, 29, 31, 0.46);
+  outline-offset: 3px;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -241,7 +253,7 @@ h3 {
 
 .carousel-track {
   position: relative;
-  height: clamp(300px, 52vh, 560px);
+  height: clamp(270px, 46vh, 500px);
   border-radius: 1.7rem;
   overflow: hidden;
   border: 1px solid rgba(44, 10, 4, 0.14);
@@ -339,6 +351,28 @@ h3 {
   background: var(--bull);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn,
+  .space-gallery img,
+  .social-link,
+  .footer-links a,
+  .reveal,
+  .carousel-slide {
+    transition: none;
+  }
+
+  .btn:hover,
+  .space-gallery img:hover,
+  .social-link:hover,
+  .footer-links a:hover {
+    transform: none;
+  }
+}
+
 .stats {
   margin-top: 2.3rem;
   display: grid;
@@ -365,29 +399,30 @@ h3 {
 }
 
 .space {
-  margin-top: 2.4rem;
+  margin-top: 2rem;
 }
 
 .space-hero {
-  margin-top: 0.9rem;
+  margin-top: 0.7rem;
   border-radius: 1.5rem;
   overflow: hidden;
   border: 1px solid rgba(44, 10, 4, 0.08);
   background: #fff;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  min-height: 360px;
+  grid-template-columns: 1fr 0.92fr;
+  min-height: 280px;
 }
 
 .space-hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 58%;
   display: block;
 }
 
 .space-hero-copy {
-  padding: clamp(1.2rem, 3vw, 2rem);
+  padding: clamp(1rem, 2.5vw, 1.55rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -395,8 +430,8 @@ h3 {
 }
 
 .space-hero-copy h3 {
-  margin: 0.5rem 0 0.7rem;
-  font-size: clamp(1.8rem, 3.8vw, 3rem);
+  margin: 0.38rem 0 0.55rem;
+  font-size: clamp(1.65rem, 3.2vw, 2.55rem);
   line-height: 0.95;
 }
 
@@ -407,19 +442,19 @@ h3 {
 }
 
 .space-gallery {
-  margin-top: 0.9rem;
+  margin-top: 0.7rem;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(240px, 1fr);
-  gap: 0.7rem;
+  grid-auto-columns: minmax(215px, 1fr);
+  gap: 0.6rem;
   overflow-x: auto;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.2rem;
   scroll-snap-type: x mandatory;
 }
 
 .space-gallery img {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 0.95rem;
   border: 1px solid rgba(44, 10, 4, 0.08);
@@ -428,8 +463,8 @@ h3 {
 }
 
 .section-bridge {
-  margin-top: 1.1rem;
-  padding: 1rem 1.05rem;
+  margin-top: 0.85rem;
+  padding: 0.9rem 1rem;
   border-radius: 1.1rem;
   border: 1px solid rgba(44, 10, 4, 0.08);
   background: linear-gradient(150deg, #fff, #fbf4e8 88%);
@@ -440,8 +475,8 @@ h3 {
 }
 
 .section-bridge h3 {
-  margin: 0.18rem 0 0;
-  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  margin: 0.14rem 0 0;
+  font-size: clamp(1.2rem, 2.15vw, 1.75rem);
 }
 
 .section-bridge-kicker {
@@ -458,7 +493,7 @@ h3 {
 }
 
 .menu {
-  margin-top: 2.4rem;
+  margin-top: 2.1rem;
 }
 
 .section-head {
@@ -478,12 +513,12 @@ h3 {
   border-radius: 1.3rem;
   border: 1px solid rgba(44, 10, 4, 0.1);
   background: rgba(255, 255, 255, 0.92);
-  padding: 0.9rem;
+  padding: 0.82rem;
 }
 
 .menu-intro {
-  margin-bottom: 0.85rem;
-  padding: 0.85rem 0.95rem;
+  margin-bottom: 0.72rem;
+  padding: 0.78rem 0.9rem;
   border-radius: 0.95rem;
   background: linear-gradient(150deg, #fff7ee, #fff 75%);
   border: 1px solid rgba(44, 10, 4, 0.08);
@@ -495,16 +530,16 @@ h3 {
 }
 
 .menu-gallery {
-  margin-bottom: 0.95rem;
+  margin-bottom: 0.8rem;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 0.7rem;
+  gap: 0.58rem;
 }
 
 .menu-gallery img {
   width: 100%;
   height: 100%;
-  min-height: 220px;
+  min-height: 165px;
   object-fit: cover;
   display: block;
   border-radius: 1rem;
@@ -569,7 +604,7 @@ h3 {
 }
 
 .menu-tools {
-  margin-top: 0.65rem;
+  margin-top: 0.55rem;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 0.65rem;
@@ -609,7 +644,7 @@ h3 {
 }
 
 .menu-panel {
-  margin-top: 1rem;
+  margin-top: 0.9rem;
   scroll-margin-top: 140px;
 }
 
@@ -793,7 +828,7 @@ h3 {
 
 .games-gallery img {
   width: 100%;
-  min-height: 220px;
+  min-height: 190px;
   height: 100%;
   object-fit: cover;
   display: block;
@@ -803,18 +838,18 @@ h3 {
 }
 
 .games-gallery img:first-child {
-  grid-column: span 2;
-  min-height: 320px;
+  grid-column: auto;
+  min-height: 190px;
 }
 
 .games-gallery img:nth-child(2) {
-  grid-column: span 2;
-  min-height: 320px;
+  grid-column: auto;
+  min-height: 190px;
 }
 
 .games-gallery img:nth-child(3),
 .games-gallery img:nth-child(4) {
-  grid-column: span 2;
+  grid-column: auto;
 }
 
 .games-tags {
@@ -1128,7 +1163,7 @@ h3 {
   }
 
   .space-hero img {
-    min-height: 250px;
+    min-height: 220px;
   }
 
   .contact {
@@ -1165,11 +1200,15 @@ h3 {
   .games-gallery img:nth-child(3),
   .games-gallery img:nth-child(4) {
     grid-column: auto;
-    min-height: 220px;
+    min-height: 200px;
   }
 
   .stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats article:last-child {
+    grid-column: 1 / -1;
   }
 
   .carousel-track {
@@ -1182,6 +1221,10 @@ h3 {
 
   .menu-filters {
     justify-content: flex-start;
+  }
+
+  .contact-form .btn {
+    width: 100%;
   }
 
 }
@@ -1394,7 +1437,16 @@ h3 {
   }
 
   .games-gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .games-gallery img,
+  .games-gallery img:first-child,
+  .games-gallery img:nth-child(2),
+  .games-gallery img:nth-child(3),
+  .games-gallery img:nth-child(4) {
+    min-height: 165px;
   }
 
   .menu-row {
@@ -1470,6 +1522,26 @@ h3 {
 
   .contact-form .btn {
     width: 100%;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stats article:last-child {
+    grid-column: auto;
+  }
+
+  .games-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .games-gallery img,
+  .games-gallery img:first-child,
+  .games-gallery img:nth-child(2),
+  .games-gallery img:nth-child(3),
+  .games-gallery img:nth-child(4) {
+    min-height: 220px;
   }
 
   .menu-row {
