@@ -1663,8 +1663,8 @@ h3 {
     width: 4.1rem;
     min-width: 4.1rem;
     display: inline-flex;
-    justify-content: flex-start;
-    text-align: left;
+    justify-content: flex-end;
+    text-align: right;
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
