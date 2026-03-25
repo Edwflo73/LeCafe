@@ -684,9 +684,22 @@ h3 {
   font-size: 0.88rem;
 }
 
+.menu-row em:empty {
+  display: none;
+}
+
 .menu-row strong {
   color: var(--bull);
   font-size: 1.03rem;
+}
+
+#menu-solo .menu-row strong,
+#menu-calientes .menu-row strong,
+#menu-frios .menu-row strong,
+#menu-alimentos .menu-row strong,
+#menu-otros .menu-row strong {
+  min-width: 3.5rem;
+  text-align: right;
 }
 
 .menu-row-rich {
@@ -1574,28 +1587,90 @@ h3 {
   }
 
   .menu-panel-compact .menu-row {
-    grid-template-columns: minmax(0, 1fr) auto;
+    display: flex;
     align-items: center;
-    gap: 0.35rem 0.75rem;
+    gap: 0.28rem;
     padding-block: 0.72rem;
-  }
-
-  .menu-panel-compact .menu-row em {
-    display: none;
-  }
-
-  .menu-panel-compact .menu-row strong {
-    grid-column: 2 / 3;
-    justify-self: end;
-    white-space: nowrap;
   }
 
   .menu-panel-compact .menu-row span {
     min-width: 0;
-    display: block;
+    flex: 1 1 auto;
+    display: inline-block;
+    font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .menu-panel-compact .menu-row em {
+    display: inline-block;
+    flex: 0 0 auto;
+    margin-right: 0.3rem;
+    color: rgba(44, 10, 4, 0.52);
+    font-style: normal;
+    font-size: 0.88em;
+    white-space: nowrap;
+  }
+
+  .menu-panel-compact .menu-row[data-mobile-size] em::before {
+    content: "(";
+  }
+
+  .menu-panel-compact .menu-row[data-mobile-size] em::after {
+    content: ")";
+  }
+
+  #menu-solo .menu-row-rich,
+  #menu-alimentos .menu-row-rich {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+
+  #menu-solo .menu-row-main,
+  #menu-alimentos .menu-row-main {
+    display: contents;
+  }
+
+  #menu-solo .menu-row-head,
+  #menu-alimentos .menu-row-head {
+    grid-column: 1 / 2;
+  }
+
+  #menu-solo .menu-row-rich p,
+  #menu-alimentos .menu-row-rich p {
+    grid-column: 1 / -1;
+  }
+
+  #menu-solo .menu-row-rich strong,
+  #menu-alimentos .menu-row-rich strong {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: start;
+    margin-top: 0.05rem;
+  }
+
+  #menu-solo .menu-row-head,
+  #menu-alimentos .menu-row-head {
+    padding-right: 0.6rem;
+  }
+
+  #menu-solo .menu-row strong,
+  #menu-calientes .menu-row strong,
+  #menu-frios .menu-row strong,
+  #menu-alimentos .menu-row strong,
+  #menu-otros .menu-row strong {
+    width: 4.1rem;
+    min-width: 4.1rem;
+    display: inline-flex;
+    justify-content: flex-start;
+    text-align: left;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .menu-panel-compact .menu-row strong {
+    margin-left: auto;
   }
 
   /* Safari iOS can fail to repaint the menu content in portrait when
