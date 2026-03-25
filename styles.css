@@ -135,6 +135,7 @@ main,
   font-weight: 600;
   border: 1px solid transparent;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -574,6 +575,7 @@ h3 {
   gap: 0.55rem;
   padding-bottom: 0.25rem;
   scrollbar-width: thin;
+  scroll-margin-top: 140px;
 }
 
 .menu-tab {
@@ -590,6 +592,7 @@ h3 {
   cursor: pointer;
   padding: 0.45rem 0.9rem;
   text-decoration: none;
+  box-shadow: 0 10px 22px rgba(128, 29, 31, 0.07);
 }
 
 .menu-tab span {
@@ -714,16 +717,31 @@ h3 {
   margin-top: 0.55rem;
 }
 
+.menu-row-tags span::before,
+.games-tags span::before {
+  content: "";
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 999px;
+  background: rgba(128, 29, 31, 0.28);
+  margin-right: 0.45rem;
+  flex: 0 0 auto;
+}
+
 .menu-row-tags span {
   display: inline-flex;
   align-items: center;
-  min-height: 1.9rem;
-  padding: 0.2rem 0.6rem;
-  border-radius: 999px;
-  background: rgba(128, 29, 31, 0.08);
-  color: rgba(44, 10, 4, 0.76);
-  font-size: 0.84rem;
-  font-weight: 600;
+  min-height: auto;
+  padding: 0.08rem 0;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  color: rgba(44, 10, 4, 0.66);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: default;
 }
 
 .menu-price-stack {
@@ -862,13 +880,17 @@ h3 {
 .games-tags span {
   display: inline-flex;
   align-items: center;
-  min-height: 2rem;
-  padding: 0.28rem 0.72rem;
-  border-radius: 999px;
-  background: rgba(128, 29, 31, 0.08);
-  color: var(--bull);
-  font-size: 0.9rem;
-  font-weight: 600;
+  min-height: auto;
+  padding: 0.12rem 0;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  color: rgba(44, 10, 4, 0.68);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: default;
 }
 
 .games-highlights {
@@ -1016,13 +1038,16 @@ h3 {
   color: var(--bull);
   text-decoration: none;
   font-weight: 600;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 22px rgba(128, 29, 31, 0.08);
+  cursor: pointer;
 }
 
 .social-link:hover,
 .footer-links a:hover {
   transform: translateY(-1px);
   border-color: rgba(128, 29, 31, 0.34);
+  box-shadow: 0 14px 28px rgba(128, 29, 31, 0.12);
 }
 
 .social-icon {
