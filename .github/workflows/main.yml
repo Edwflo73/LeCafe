@@ -1,0 +1,21 @@
+name: Despliegue a Le Cafe
+on:
+  push:
+    branches:
+      - main # Solo se activa cuando mandas cambios a main
+
+jobs:
+  web-deploy:
+    name: 🎉 Desplegar
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Obteniendo código
+      uses: actions/checkout@v3
+
+    - name: 📂 Sincronizando con Neubox
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: ./public_html/ # Esta es la carpeta destino en Neubox
