@@ -1548,6 +1548,31 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .menu-panel-compact .menu-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.35rem 0.75rem;
+    padding-block: 0.72rem;
+  }
+
+  .menu-panel-compact .menu-row em {
+    display: none;
+  }
+
+  .menu-panel-compact .menu-row strong {
+    grid-column: 2 / 3;
+    justify-self: end;
+    white-space: nowrap;
+  }
+
+  .menu-panel-compact .menu-row span {
+    min-width: 0;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   /* Safari iOS can fail to repaint the menu content in portrait when
      rounded panels, nested scroll areas and grid children stack together. */
   .menu,
