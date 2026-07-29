@@ -1,27 +1,203 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me; frame-ancestors 'self'; upgrade-insecure-requests"
-    />
-    <link rel="icon" href="./assets/logos/favicon.svg" type="image/svg+xml" />
-    <link rel="shortcut icon" href="./assets/logos/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="./assets/logos/favicon.svg" />
-    <title>Le Café - Café de especialidad</title>
-    <meta
-      name="description"
-      content="Le Café: café de especialidad con granos seleccionados, tostado artesanal y un patio para disfrutar sin prisa."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css?v=20260315-3" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Le Café - Café de Especialidad en Boca del Río | Veracruz</title>
+  <meta name="description" content="Café de especialidad en Boca del Río con jardín y patio. Bebidas artesanales, alimentos, juegos y espacio para trabajar. Abierto viernes a lunes.">
+  <meta name="keywords" content="café de especialidad Boca del Río, café Veracruz, café para trabajar, café con jardín, especialidad café Boca del Río">
+  <link rel="canonical" href="https://www.lecafe.mx/" />
+
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me; frame-ancestors 'self'; upgrade-insecure-requests"
+  />
+
+  <link rel="icon" href="./assets/logos/favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="./assets/logos/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./assets/logos/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css?v=20260315-3" />
+
+  <!-- Schema Markup JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Le Café",
+    "image": "https://www.lecafe.mx/assets/logos/logo_Coffee_H.svg",
+    "description": "Café de especialidad con jardín y patio en Boca del Río. Bebidas bien hechas, alimentos, juegos de mesa y un ambiente para relajarse.",
+    "url": "https://www.lecafe.mx",
+    "telephone": "+522294334031",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Isauro Acosta 311",
+      "addressLocality": "Boca del Río",
+      "addressRegion": "Veracruz",
+      "postalCode": "94297",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "18.7898",
+      "longitude": "-96.1520"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday", "Saturday", "Sunday", "Monday"],
+        "opens": "18:00",
+        "closes": "23:00",
+        "validFrom": "2026-03-27"
+      }
+    ],
+    "priceRange": "$$",
+    "servesCuisine": "Coffee",
+    "sameAs": [
+      "https://www.instagram.com/le_cafe_especialidad",
+      "https://wa.me/522294334031"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "48"
+    },
+    "hasMenu": {
+      "@type": "Menu",
+      "name": "Le Café Menu",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Especialidades de la casa",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Dulce Desvelo",
+              "description": "Agua de horchata casera de arroz con un toque de cafe y canela ahumada.",
+              "offers": {
+                "@type": "Offer",
+                "price": "69",
+                "priceCurrency": "MXN"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Carajillo",
+              "description": "Con leche o sin ella, sin alcohol y con caracter. Perfil limpio y elegante.",
+              "offers": {
+                "@type": "Offer",
+                "price": "69",
+                "priceCurrency": "MXN"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Bebidas calientes",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Espresso",
+              "offers": {
+                "@type": "Offer",
+                "price": "20",
+                "priceCurrency": "MXN"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Cappucino",
+              "offers": {
+                "@type": "Offer",
+                "price": "49",
+                "priceCurrency": "MXN"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Latte",
+              "offers": {
+                "@type": "Offer",
+                "price": "57",
+                "priceCurrency": "MXN"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Café para llevar",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Valle de Escol - Café de especialidad",
+              "description": "Azucar moscada, chocolate con leche y naranja. Cuerpo alto y cremoso. De Ixhuacan de los Reyes, Veracruz.",
+              "offers": {
+                "@type": "Offer",
+                "price": "710",
+                "priceCurrency": "MXN",
+                "availability": "https://schema.org/InStock"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Le Café",
+    "url": "https://www.lecafe.mx",
+    "logo": "https://www.lecafe.mx/assets/logos/logo_Coffee_H.svg",
+    "description": "Café de especialidad, bebidas bien hechas y un patio para disfrutar sin prisa en Boca del Río, Veracruz.",
+    "sameAs": [
+      "https://www.instagram.com/le_cafe_especialidad",
+      "https://wa.me/522294334031"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "telephone": "+522294334031",
+      "areaServed": ["MX"],
+      "availableLanguage": ["es"]
+    }
+  }
+  </script>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="business.business" />
+  <meta property="og:url" content="https://www.lecafe.mx/" />
+  <meta property="og:image" content="https://www.lecafe.mx/assets/patio/img_7801.jpg" />
+  <meta property="og:image:alt" content="Café servido en la terraza de Le Café Boca del Río" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:title" content="Le Café | Café de Especialidad y Jardín en Boca del Río" />
+  <meta property="og:description" content="Café de especialidad, bebidas bien hechas y un patio agradable para trabajar, conversar o relajarte. En Boca del Río, Veracruz." />
+  <meta property="og:locale" content="es_MX" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Le Café | Café de Especialidad en Boca del Río" />
+  <meta name="twitter:description" content="Café de especialidad, bebidas bien hechas y un patio agradable. En Isauro Acosta 311, Boca del Río." />
+  <meta name="twitter:image" content="https://www.lecafe.mx/assets/patio/img_7801.jpg" />
+
+  <!-- Local SEO Meta Tags -->
+  <meta name="geo.position" content="18.7898;-96.1520" />
+  <meta name="ICBM" content="18.7898,-96.1520" />
+
   </head>
   <body>
     <div class="bg-pattern" aria-hidden="true"></div>
@@ -41,11 +217,11 @@
 
     <main>
       <section id="inicio" class="hero reveal">
-        <p class="eyebrow">Café de especialidad</p>
+        <p class="eyebrow">QUIEN TE AMA, SABE CÓMO TE GUSTA EL CAFÉ</p>
         <div class="hero-title-wrap">
-          <h1 class="hero-title-single-line">Dale café a los que amas, en un rincón para quedarte</h1>
+          <h1 class="hero-title-single-line">Café de Especialidad en un jardín de Boca del Río</h1>
         </div>
-        <p class="hero-lead">Café de especialidad, bebidas bien hechas y un patio para disfrutar sin prisa.</p>
+        <p class="hero-lead">Café de especialidad artesanal con bebidas bien hechas, un hermoso patio y ambiente perfecto para trabajar, conversar o relajarte en Boca del Río.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#espacio">Descubrir el patio</a>
           <a class="btn btn-soft" href="#menu-opciones">Ver el menú</a>
@@ -112,19 +288,19 @@
 
       <section id="espacio" class="space reveal" aria-label="El patio de Le Cafe">
         <div class="section-head">
-          <p class="eyebrow">Nuestro rincón</p>
-          <h2>Un patio para bajar el ritmo y disfrutar el café</h2>
+          <p class="eyebrow">Ambiente Único en Boca del Río</p>
+          <h2>Un Patio de Café de Especialidad para Bajar el Ritmo y Disfrutar sin Prisa</h2>
         </div>
 
         <article class="space-hero">
           <img
             src="./assets/patio/space-hero.jpg"
-            alt="Vista general de un cafe en patio al aire libre"
+            alt="Patio de café de especialidad en Boca del Río con luz natural y vegetación"
             loading="lazy"
           />
           <div class="space-hero-copy">
-            <p class="eyebrow">Ambiente Le Café</p>
-            <h3>Luz natural, vegetación y calma</h3>
+            <p class="eyebrow">Espacio Ideal para Disfrutar Café de Especialidad</p>
+            <h3>Jardín con Luz Natural, Vegetación y Calma en Boca del Río</h3>
             <p>
               Mesas al aire libre, vegetación y una atmósfera relajada para conversar, trabajar o simplemente hacer una pausa.
             </p>
@@ -150,8 +326,8 @@
 
       <section id="menu" class="menu reveal">
         <div class="section-head">
-          <p class="eyebrow">Menú completo</p>
-          <h2>Qué se te antoja en Le Café</h2>
+          <p class="eyebrow">Menú de Especialidades</p>
+          <h2>Café de Especialidad y Bebidas Artesanales en Le Café Boca del Río</h2>
         </div>
 
         <div class="menu-ui" data-menu>
