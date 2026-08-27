@@ -80,7 +80,7 @@
             {
               "@type": "MenuItem",
               "name": "Dulce Desvelo",
-              "description": "Agua de horchata casera de arroz con un toque de cafe y canela ahumada.",
+              "description": "Agua de horchata casera de arroz con un toque de cafe y canela ahumada. Dulce y suave.",
               "offers": {
                 "@type": "Offer",
                 "price": "69",
@@ -90,7 +90,7 @@
             {
               "@type": "MenuItem",
               "name": "Carajillo",
-              "description": "Con leche o sin ella, sin alcohol y con caracter. Perfil limpio y elegante.",
+              "description": "Sin Alcohol. Con leche o sin ella, pero siempre con caracter. Perfumado con romero fresco de nuestro jardín. Una versión limpia, elegante y deliciosa de este clásico rebelde.",
               "offers": {
                 "@type": "Offer",
                 "price": "69",
@@ -129,7 +129,44 @@
                 "price": "57",
                 "priceCurrency": "MXN"
               }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Le",
+              "description": "12 oz",
+              "offers": {
+                "@type": "Offer",
+                "price": "92",
+                "priceCurrency": "MXN"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Big Le",
+              "description": "16 oz",
+              "offers": {
+                "@type": "Offer",
+                "price": "99",
+                "priceCurrency": "MXN"
+              }
             }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Frappe",
+          "hasMenuItem": [
+            { "@type": "MenuItem", "name": "Mazapán", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
+            { "@type": "MenuItem", "name": "Taro", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
+            { "@type": "MenuItem", "name": "Chai", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
+            { "@type": "MenuItem", "name": "Matcha", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
+            { "@type": "MenuItem", "name": "Cookies and cream", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
+            { "@type": "MenuItem", "name": "Chocolate", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
+            { "@type": "MenuItem", "name": "Café con cacao", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
+            { "@type": "MenuItem", "name": "Café caramelo", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
+            { "@type": "MenuItem", "name": "Café", "description": "16 oz", "offers": { "@type": "Offer", "price": "85", "priceCurrency": "MXN" } },
+            { "@type": "MenuItem", "name": "Café con chocolate", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
+            { "@type": "MenuItem", "name": "Malteada de vainilla", "description": "16 oz", "offers": { "@type": "Offer", "price": "99", "priceCurrency": "MXN" } }
           ]
         },
         {
@@ -344,9 +381,10 @@
           </div>
 
           <nav id="menu-opciones" class="menu-tabs" aria-label="Ir a una categoria del menu">
-            <a class="menu-tab" href="#menu-solo">Especialidades de la casa <span>7</span></a>
-            <a class="menu-tab" href="#menu-calientes">Bebidas calientes <span>16</span></a>
+            <a class="menu-tab" href="#menu-solo">Especialidades de la casa <span>5</span></a>
+            <a class="menu-tab" href="#menu-calientes">Bebidas calientes <span>18</span></a>
             <a class="menu-tab" href="#menu-frios">Bebidas frías <span>10</span></a>
+            <a class="menu-tab" href="#menu-frappe">Frappe <span>11</span></a>
             <a class="menu-tab" href="#menu-alimentos">Alimentos <span>3</span></a>
             <a class="menu-tab" href="#menu-otros">Otras bebidas <span>3</span></a>
             <a class="menu-tab" href="#menu-bolsa">Café para llevar a casa <span>4</span></a>
@@ -367,55 +405,41 @@
                 <p class="menu-kicker">Especialidades</p>
                 <h3 id="menu-heading-solo">Especialidades de la casa</h3>
               </div>
-              <span class="menu-count" data-menu-count>7 opciones</span>
+              <span class="menu-count" data-menu-count>5 opciones</span>
             </div>
             <ul class="menu-list">
-              <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="no" data-name="Recuerdo de hogar">
-                <div class="menu-row-main">
-                  <div class="menu-row-head"><span>Recuerdo de hogar</span><em>Especial</em></div>
-                  <p>Chocolate caliente 100% cacao natural acompanado de pan de concha tradicional.</p>
-                </div>
-                <strong>$65</strong>
-              </li>
-              <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="no" data-name="Cocotazo">
-                <div class="menu-row-main">
-                  <div class="menu-row-head"><span>Cocotazo</span><em>Especial</em></div>
-                  <p>Atole de coco natural con ralladura fina de coco. Cremoso, dulce y reconfortante.</p>
-                </div>
-                <strong>$45</strong>
-              </li>
               <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="no" data-name="Tierra Viva">
                 <div class="menu-row-main">
                   <div class="menu-row-head"><span>Tierra Viva</span><em>Especial</em></div>
-                  <p>Mezcla de naranja, toronja, limon y tamarindo con agua mineral. 100% natural.</p>
+                  <p>Una mezcla vibrante natural de naranja, toronja, limón y tamarindo; con agua mineral, chispeante y refrescante.</p>
                 </div>
-                <strong>$69</strong>
+                <strong>$85</strong>
               </li>
               <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="yes" data-name="Dulce Desvelo">
                 <div class="menu-row-main">
                   <div class="menu-row-head"><span>Dulce Desvelo</span><em>Con cafe</em></div>
-                  <p>Agua de horchata casera de arroz con un toque de cafe y canela ahumada.</p>
+                  <p>Agua de horchata casera de arroz con un toque de cafe y canela ahumada. Dulce y suave.</p>
                 </div>
                 <strong>$69</strong>
               </li>
               <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="yes" data-name="Carajillo">
                 <div class="menu-row-main">
                   <div class="menu-row-head"><span>Carajillo!</span><em>Con cafe</em></div>
-                  <p>Con leche o sin ella, sin alcohol y con caracter. Perfil limpio y elegante.</p>
+                  <p>Sin Alcohol. Con leche o sin ella, pero siempre con caracter. Perfumado con romero fresco de nuestro jardín. Una versión limpia, elegante y deliciosa de este clásico rebelde.</p>
                 </div>
                 <strong>$69</strong>
               </li>
               <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="no" data-name="PepiJal">
                 <div class="menu-row-main">
                   <div class="menu-row-head"><span>PepiJal</span><em>Especial</em></div>
-                  <p>Pepino, limon y jalapeno. Refrescante, atrevido y con un toque de picor.</p>
+                  <p>Pepino, limon y jalapeno. Refrescante y atrevido. Un beso de limón, un toque de picor y pura frescura en cada sorbo.</p>
                 </div>
                 <strong>$64</strong>
               </li>
               <li class="menu-row menu-row-rich" data-menu-item data-has-coffee="no" data-name="Las Chulas">
                 <div class="menu-row-main">
                   <div class="menu-row-head"><span>Las Chulas</span><em>Especial</em></div>
-                  <p>Limonadas y naranjadas con jugo natural. Dulces, citricas y sabrosas.</p>
+                  <p>Limonadas y naranjadas hechas con jugo natural. Dulces, citricas y encantadoras. Así son ellas, frías y sabrosas</p>
                 </div>
                 <strong>$45</strong>
               </li>
@@ -429,7 +453,7 @@
                 <p class="menu-kicker">Favoritos clásicos</p>
                 <h3 id="menu-heading-calientes">Bebidas calientes</h3>
               </div>
-              <span class="menu-count" data-menu-count>16 opciones</span>
+              <span class="menu-count" data-menu-count>18 opciones</span>
             </div>
             <ul class="menu-list">
               <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Espresso" data-mobile-size="1 oz"><span>Espresso</span><em>1 oz</em><strong>$20</strong></li>
@@ -448,6 +472,8 @@
               <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Chai" data-mobile-size="16 oz"><span>Chai</span><em>16 oz</em><strong>$75</strong></li>
               <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Matcha" data-mobile-size="16 oz"><span>Matcha</span><em>16 oz</em><strong>$79</strong></li>
               <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Te" data-mobile-size="16 oz"><span>Te</span><em>16 oz</em><strong>$30</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Le" data-mobile-size="12 oz"><span>Le</span><em>12 oz</em><strong>$92</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Big Le" data-mobile-size="16 oz"><span>Big Le</span><em>16 oz</em><strong>$99</strong></li>
             </ul>
             <p class="menu-empty">No encontramos resultados. Prueba con otra búsqueda o cambia el filtro.</p>
           </section>
@@ -471,6 +497,30 @@
               <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Chai Frio" data-mobile-size="16 oz"><span>Chai Frio</span><em>16 oz</em><strong>$75</strong></li>
               <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Matcha Frio" data-mobile-size="16 oz"><span>Matcha Frio</span><em>16 oz</em><strong>$79</strong></li>
               <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Te Frio" data-mobile-size="16 oz"><span>Te Frio</span><em>16 oz</em><strong>$30</strong></li>
+            </ul>
+            <p class="menu-empty">No encontramos resultados. Prueba con otra búsqueda o cambia el filtro.</p>
+          </section>
+
+          <section id="menu-frappe" class="menu-panel menu-panel-compact" data-menu-panel="frappe" aria-labelledby="menu-heading-frappe">
+            <div class="menu-panel-head">
+              <div>
+                <p class="menu-kicker">Cremosos y refrescantes</p>
+                <h3 id="menu-heading-frappe">Frappe</h3>
+              </div>
+              <span class="menu-count" data-menu-count>11 opciones</span>
+            </div>
+            <ul class="menu-list">
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Mazapán" data-mobile-size="16 oz"><span>Mazapán</span><em>16 oz</em><strong>$89</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Taro" data-mobile-size="16 oz"><span>Taro</span><em>16 oz</em><strong>$89</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Chai" data-mobile-size="16 oz"><span>Chai</span><em>16 oz</em><strong>$89</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Matcha" data-mobile-size="16 oz"><span>Matcha</span><em>16 oz</em><strong>$89</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Cookies and cream" data-mobile-size="16 oz"><span>Cookies and cream</span><em>16 oz</em><strong>$89</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Chocolate" data-mobile-size="16 oz"><span>Chocolate</span><em>16 oz</em><strong>$89</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Café con cacao" data-mobile-size="16 oz"><span>Café con cacao</span><em>16 oz</em><strong>$89</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Café caramelo" data-mobile-size="16 oz"><span>Café caramelo</span><em>16 oz</em><strong>$89</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Café" data-mobile-size="16 oz"><span>Café</span><em>16 oz</em><strong>$85</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="yes" data-name="Café con chocolate" data-mobile-size="16 oz"><span>Café con chocolate</span><em>16 oz</em><strong>$89</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Malteada de vainilla" data-mobile-size="16 oz"><span>Malteada de vainilla</span><em>16 oz</em><strong>$99</strong></li>
             </ul>
             <p class="menu-empty">No encontramos resultados. Prueba con otra búsqueda o cambia el filtro.</p>
           </section>
@@ -518,9 +568,9 @@
               <span class="menu-count" data-menu-count>3 opciones</span>
             </div>
             <ul class="menu-list">
-              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Sodas"><span>Sodas</span><em></em><strong>$43</strong></li>
-              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="TopoChico"><span>TopoChico</span><em></em><strong>$35</strong></li>
-              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Coca Cola"><span>Coca Cola</span><em></em><strong>$36</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Jugos"><span>Jugos</span><em></em><strong>$35</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Topo Chico"><span>Topo Chico</span><em></em><strong>$36</strong></li>
+              <li class="menu-row" data-menu-item data-has-coffee="no" data-name="Coca Cola"><span>Coca Cola</span><em></em><strong>$35</strong></li>
             </ul>
             <p class="menu-empty">No encontramos resultados. Prueba con otra búsqueda o cambia el filtro.</p>
           </section>
