@@ -11,8 +11,8 @@ Disallow: /assets/temp/
 # Velocidad de crawl
 Crawl-delay: 1
 
-# Sitemap location
-Sitemap: https://www.lecafe.mx/sitemap.xml
+# Sitemap location (canónico)
+Sitemap: https://lecafe.mx/sitemap.xml
 
 # Google specific
 User-agent: Googlebot
@@ -33,3 +33,19 @@ Disallow: /
 
 User-agent: MJ12bot
 Disallow: /
+
+# Allow modern AI and LLM crawlers for RAG/AEO extraction (explicitly permitted)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude
+Allow: /
+
+User-agent: Perplexity
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /

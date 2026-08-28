@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Le Café - Café de Especialidad en Boca del Río | Veracruz</title>
-  <meta name="description" content="Café de especialidad en Boca del Río con jardín y patio. Bebidas artesanales, alimentos, juegos y espacio para trabajar. Abierto viernes a lunes.">
-  <meta name="keywords" content="café de especialidad Boca del Río, café Veracruz, café para trabajar, café con jardín, especialidad café Boca del Río">
-  <link rel="canonical" href="https://www.lecafe.mx/" />
+  <title>Le Café | Café de Especialidad y Jardín en Boca del Río, Veracruz</title>
+  <meta name="description" content="Le Café — café de especialidad artesanal con patio y jardín en Boca del Río, Veracruz. Bebidas de autor, café en grano (Coatepec, Ixhuacán, Oaxaca, Guerrero), alimentos, juegos de mesa y espacio para trabajar. Horario: Vie–Lun 18:00–23:00.">
+  <meta name="keywords" content="Le Café, café de especialidad, Boca del Río, Veracruz, patio, jardín, café en grano, Coatepec, Ixhuacán, Oaxaca, Guerrero">
+  <link rel="canonical" href="https://lecafe.mx/" />
 
   <meta
     http-equiv="Content-Security-Policy"
@@ -26,198 +26,96 @@
   />
   <link rel="stylesheet" href="./styles.css?v=20260315-3" />
 
-  <!-- Schema Markup JSON-LD -->
+  <!-- Primary JSON-LD: CafeOrCoffeeShop + FAQ for AEO/RAG -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Le Café",
-    "image": "https://www.lecafe.mx/assets/logos/logo_Coffee_H.svg",
-    "description": "Café de especialidad con jardín y patio en Boca del Río. Bebidas bien hechas, alimentos, juegos de mesa y un ambiente para relajarse.",
-    "url": "https://www.lecafe.mx",
-    "telephone": "+522294334031",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Isauro Acosta 311",
-      "addressLocality": "Boca del Río",
-      "addressRegion": "Veracruz",
-      "postalCode": "94297",
-      "addressCountry": "MX"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "18.7898",
-      "longitude": "-96.1520"
-    },
-    "openingHoursSpecification": [
+    "@graph": [
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Friday", "Saturday", "Sunday", "Monday"],
-        "opens": "18:00",
-        "closes": "23:00",
-        "validFrom": "2026-03-27"
-      }
-    ],
-    "priceRange": "$$",
-    "servesCuisine": "Coffee",
-    "sameAs": [
-      "https://www.instagram.com/le_cafe_especialidad",
-      "https://wa.me/522294334031"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "48"
-    },
-    "hasMenu": {
-      "@type": "Menu",
-      "name": "Le Café Menu",
-      "hasMenuSection": [
-        {
-          "@type": "MenuSection",
-          "name": "Especialidades de la casa",
-          "hasMenuItem": [
-            {
-              "@type": "MenuItem",
-              "name": "Dulce Desvelo",
-              "description": "Agua de horchata casera de arroz con un toque de cafe y canela ahumada. Dulce y suave.",
-              "offers": {
-                "@type": "Offer",
-                "price": "69",
-                "priceCurrency": "MXN"
-              }
-            },
-            {
-              "@type": "MenuItem",
-              "name": "Carajillo",
-              "description": "Sin Alcohol. Con leche o sin ella, pero siempre con caracter. Perfumado con romero fresco de nuestro jardín. Una versión limpia, elegante y deliciosa de este clásico rebelde.",
-              "offers": {
-                "@type": "Offer",
-                "price": "69",
-                "priceCurrency": "MXN"
-              }
-            }
-          ]
+        "@type": "CafeOrCoffeeShop",
+        "name": "Le Café - Café de Especialidad",
+        "url": "https://lecafe.mx/",
+        "sameAs": [
+          "https://lecafe.com.mx",
+          "https://www.instagram.com/le_cafe_especialidad",
+          "https://maps.app.goo.gl/ACNYhi43NhBxyR7bA"
+        ],
+        "description": "Café de especialidad artesanal, bebidas de autor, alimentos y café en grano en un patio y jardín relajado en Boca del Río, Veracruz.",
+        "telephone": "+522294334031",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Isauro Acosta 311",
+          "addressLocality": "Boca del Río",
+          "addressRegion": "Veracruz",
+          "postalCode": "94297",
+          "addressCountry": "MX"
         },
-        {
-          "@type": "MenuSection",
-          "name": "Bebidas calientes",
-          "hasMenuItem": [
-            {
-              "@type": "MenuItem",
-              "name": "Espresso",
-              "offers": {
-                "@type": "Offer",
-                "price": "20",
-                "priceCurrency": "MXN"
-              }
-            },
-            {
-              "@type": "MenuItem",
-              "name": "Cappucino",
-              "offers": {
-                "@type": "Offer",
-                "price": "49",
-                "priceCurrency": "MXN"
-              }
-            },
-            {
-              "@type": "MenuItem",
-              "name": "Latte",
-              "offers": {
-                "@type": "Offer",
-                "price": "57",
-                "priceCurrency": "MXN"
-              }
-            },
-            {
-              "@type": "MenuItem",
-              "name": "Le",
-              "description": "12 oz",
-              "offers": {
-                "@type": "Offer",
-                "price": "92",
-                "priceCurrency": "MXN"
-              }
-            },
-            {
-              "@type": "MenuItem",
-              "name": "Big Le",
-              "description": "16 oz",
-              "offers": {
-                "@type": "Offer",
-                "price": "99",
-                "priceCurrency": "MXN"
-              }
-            }
-          ]
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 19.0583,
+          "longitude": -96.1286
         },
-        {
-          "@type": "MenuSection",
-          "name": "Frappe",
-          "hasMenuItem": [
-            { "@type": "MenuItem", "name": "Mazapán", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
-            { "@type": "MenuItem", "name": "Taro", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
-            { "@type": "MenuItem", "name": "Chai", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
-            { "@type": "MenuItem", "name": "Matcha", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
-            { "@type": "MenuItem", "name": "Cookies and cream", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
-            { "@type": "MenuItem", "name": "Chocolate", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
-            { "@type": "MenuItem", "name": "Café con cacao", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
-            { "@type": "MenuItem", "name": "Café caramelo", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
-            { "@type": "MenuItem", "name": "Café", "description": "16 oz", "offers": { "@type": "Offer", "price": "85", "priceCurrency": "MXN" } },
-            { "@type": "MenuItem", "name": "Café con chocolate", "description": "16 oz", "offers": { "@type": "Offer", "price": "89", "priceCurrency": "MXN" } },
-            { "@type": "MenuItem", "name": "Malteada de vainilla", "description": "16 oz", "offers": { "@type": "Offer", "price": "99", "priceCurrency": "MXN" } }
-          ]
-        },
-        {
-          "@type": "MenuSection",
-          "name": "Café para llevar",
-          "hasMenuItem": [
-            {
-              "@type": "MenuItem",
-              "name": "Valle de Escol - Café de especialidad",
-              "description": "Azucar moscada, chocolate con leche y naranja. Cuerpo alto y cremoso. De Ixhuacan de los Reyes, Veracruz.",
-              "offers": {
-                "@type": "Offer",
-                "price": "710",
-                "priceCurrency": "MXN",
-                "availability": "https://schema.org/InStock"
-              }
-            }
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Friday","Saturday","Sunday","Monday"],
+            "opens": "18:00",
+            "closes": "23:00"
+          }
+        ],
+        "servesCuisine": ["Specialty Coffee","Mexican Coffee","Artisanal Beverages","Snacks"],
+        "priceRange": "$$",
+        "amenityFeature": [
+          {"@type":"LocationFeatureSpecification","name":"Jardín/Terraza","value":true},
+          {"@type":"LocationFeatureSpecification","name":"Juegos de mesa","value":true},
+          {"@type":"LocationFeatureSpecification","name":"Ambiente para trabajar/relajación","value":true}
+        ],
+        "hasMenu": {
+          "@type": "Menu",
+          "url": "https://lecafe.mx/#menu",
+          "name": "Menú Le Café",
+          "hasMenuSection": [
+            {"@type":"MenuSection","name":"Especialidades de la casa"},
+            {"@type":"MenuSection","name":"Bebidas calientes"},
+            {"@type":"MenuSection","name":"Bebidas frías"},
+            {"@type":"MenuSection","name":"Frappe"},
+            {"@type":"MenuSection","name":"Café para llevar"}
           ]
         }
-      ]
-    }
-  }
-  </script>
-
-  <!-- Organization Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Le Café",
-    "url": "https://www.lecafe.mx",
-    "logo": "https://www.lecafe.mx/assets/logos/logo_Coffee_H.svg",
-    "description": "Café de especialidad, bebidas bien hechas y un patio para disfrutar sin prisa en Boca del Río, Veracruz.",
-    "sameAs": [
-      "https://www.instagram.com/le_cafe_especialidad",
-      "https://wa.me/522294334031"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "Customer Service",
-      "telephone": "+522294334031",
-      "areaServed": ["MX"],
-      "availableLanguage": ["es"]
-    }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Dónde está Le Café?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Isauro Acosta 311, C.P. 94297, Boca del Río, Veracruz, México. Abrimos Viernes a Lunes de 18:00 a 23:00." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué orígenes de café ofrecen?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ofrecemos granos mexicanos: Coatepec, Ixhuacán, Oaxaca y Guerrero, disponibles en molido o en grano para llevar." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo reservar o pedir para recoger?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Puedes reservar por WhatsApp al +52 229 433 4031 o hacer pedido para recoger; también estamos en Rappi para entrega a domicilio." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Hay espacio al aire libre y juegos de mesa?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí: contamos con un patio/jardín y una selección de juegos de mesa para quedarse a disfrutar." }
+          }
+        ]
+      }
+    ]
   }
   </script>
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:type" content="business.business" />
-  <meta property="og:url" content="https://www.lecafe.mx/" />
-  <meta property="og:image" content="https://www.lecafe.mx/assets/patio/img_7801.jpg" />
+  <meta property="og:type" content="restaurant.restaurant" />
+  <meta property="og:url" content="https://lecafe.mx/" />
+  <meta property="og:image" content="https://lecafe.mx/assets/patio/img_7801.jpg" />
   <meta property="og:image:alt" content="Café servido en la terraza de Le Café Boca del Río" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -227,13 +125,15 @@
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Le Café | Café de Especialidad en Boca del Río" />
-  <meta name="twitter:description" content="Café de especialidad, bebidas bien hechas y un patio agradable. En Isauro Acosta 311, Boca del Río." />
-  <meta name="twitter:image" content="https://www.lecafe.mx/assets/patio/img_7801.jpg" />
+  <meta name="twitter:title" content="Le Café | Café de Especialidad y Jardín en Boca del Río, Veracruz" />
+  <meta name="twitter:description" content="Le Café — café de especialidad con patio y jardín en Boca del Río. Bebidas de autor, café en grano y menú para disfrutar en el patio." />
+  <meta name="twitter:image" content="https://lecafe.mx/assets/patio/img_7801.jpg" />
 
   <!-- Local SEO Meta Tags -->
-  <meta name="geo.position" content="18.7898;-96.1520" />
-  <meta name="ICBM" content="18.7898,-96.1520" />
+  <meta name="geo.region" content="MX-VER" />
+  <meta name="geo.placename" content="Boca del Río" />
+  <meta name="geo.position" content="19.0583;-96.1286" />
+  <meta name="ICBM" content="19.0583,-96.1286" />
 
   </head>
   <body>
@@ -703,6 +603,31 @@
           <strong>Viernes a lunes</strong>
           <p>6:00 p.m. a 11:00 p.m.</p>
         </article>
+      </section>
+
+      <section id="faq" class="faq reveal" aria-labelledby="faq-title">
+        <div class="section-head">
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2 id="faq-title">Preguntas rápidas — Respuesta primero</h2>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3 class="faq-q">¿Dónde está Le Café?</h3>
+            <p class="faq-a">Respuesta: Isauro Acosta 311, C.P. 94297, Boca del Río, Veracruz, México. Abrimos Viernes a Lunes, 18:00–23:00.</p>
+          </article>
+          <article class="faq-item">
+            <h3 class="faq-q">¿Qué orígenes de café venden?</h3>
+            <p class="faq-a">Respuesta: Granos mexicanos de Coatepec, Ixhuacán, Oaxaca y Guerrero; disponibles en molido o en grano para llevar.</p>
+          </article>
+          <article class="faq-item">
+            <h3 class="faq-q">¿Puedo reservar o pedir para recoger?</h3>
+            <p class="faq-a">Respuesta: Sí — reserva por WhatsApp +52 229 433 4031 o pide por Rappi para entrega. También puedes usar el formulario de reserva en la web.</p>
+          </article>
+          <article class="faq-item">
+            <h3 class="faq-q">¿Hay jardín y juegos de mesa?</h3>
+            <p class="faq-a">Respuesta: Sí — contamos con patio/jardín y una selección de juegos de mesa para compartir mientras disfrutas tu bebida.</p>
+          </article>
+        </div>
       </section>
 
       <section id="contacto" class="contact reveal">

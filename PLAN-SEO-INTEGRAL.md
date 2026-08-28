@@ -135,7 +135,7 @@ En cada post/página, vincula naturalmente a:
    - **Nombre**: Le Café
    - **Dirección**: Isauro Acosta 311, C.P. 94297, Boca del Río, Veracruz
    - **Teléfono**: +522294334031
-   - **Sitio web**: https://www.lecafe.mx
+   - **Sitio web**: https://lecafe.mx
    - **Categoría principal**: Café - Especialidades de Café
    - **Categorías adicionales**: 
      - Restaurante
@@ -157,7 +157,7 @@ En cada post/página, vincula naturalmente a:
 ### PageSpeed Insights:
 
 1. Ve a [PageSpeed Insights](https://pagespeed.web.dev/)
-2. Ingresa: https://www.lecafe.mx
+2. Ingresa: https://lecafe.mx
 3. **Objetivo: >90 en Desktop, >75 en Mobile**
 
 **Si no alcanzas, optimiza:**
@@ -174,7 +174,7 @@ En cada post/página, vincula naturalmente a:
 ### Schema Markup Validation:
 
 1. Ve a [Schema.org Validator](https://validator.schema.org/)
-2. Ingresa: https://www.lecafe.mx
+2. Ingresa: https://lecafe.mx
 3. Verifica que no haya errores (solo warnings permitidos)
 
 ---

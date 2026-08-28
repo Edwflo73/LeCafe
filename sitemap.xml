@@ -4,7 +4,7 @@
   
   <!-- Página principal -->
   <url>
-    <loc>https://www.lecafe.mx/</loc>
+    <loc>https://lecafe.mx/</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -13,63 +13,63 @@
 
   <!-- Secciones principales -->
   <url>
-    <loc>https://www.lecafe.mx/#inicio</loc>
+    <loc>https://lecafe.mx/#inicio</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.lecafe.mx/#espacio</loc>
+    <loc>https://lecafe.mx/#espacio</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.lecafe.mx/#menu</loc>
+    <loc>https://lecafe.mx/#menu</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.lecafe.mx/#menu-solo</loc>
+    <loc>https://lecafe.mx/#menu-solo</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.lecafe.mx/#menu-calientes</loc>
+    <loc>https://lecafe.mx/#menu-calientes</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.lecafe.mx/#menu-frios</loc>
+    <loc>https://lecafe.mx/#menu-frios</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.lecafe.mx/#menu-alimentos</loc>
+    <loc>https://lecafe.mx/#menu-alimentos</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.lecafe.mx/#menu-bolsa</loc>
+    <loc>https://lecafe.mx/#menu-bolsa</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.lecafe.mx/#contacto</loc>
+    <loc>https://lecafe.mx/#contacto</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

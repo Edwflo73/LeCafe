@@ -37,7 +37,7 @@ México
 
 **Sitio web:**
 ```
-https://www.lecafe.mx
+https://lecafe.mx
 ```
 
 **Haz clic en "Siguiente"**
@@ -59,7 +59,7 @@ Una vez creada la empresa base, COMPLETA todos estos campos:
 
 #### 📞 Contacto:
 - **Teléfono**: +522294334031 ✅
-- **Sitio web**: https://www.lecafe.mx ✅
+- **Sitio web**: https://lecafe.mx ✅
 - **Email**: Agrega un email de contacto
 
 #### 🕐 Horarios de Atención:
@@ -153,7 +153,7 @@ Selecciona todos los que apliquen:
 ### Paso 8: Menú Digital
 
 1. Ve a la sección **"Menú"** en tu perfil
-2. Agrega el link: `https://www.lecafe.mx/#menu`
+2. Agrega el link: `https://lecafe.mx/#menu`
 3. Opcionalmente, carga fotos del menú
 
 ---
@@ -162,9 +162,9 @@ Selecciona todos los que apliquen:
 
 Agrega estos botones en tu perfil:
 
-- **Sitio web**: https://www.lecafe.mx
-- **Menu/Lista de precios**: https://www.lecafe.mx/#menu
-- **Reservas**: https://www.lecafe.mx/#contacto
+- **Sitio web**: https://lecafe.mx
+- **Menu/Lista de precios**: https://lecafe.mx/#menu
+- **Reservas**: https://lecafe.mx/#contacto
 - **WhatsApp**: https://wa.me/522294334031
 - **Instagram**: https://www.instagram.com/le_cafe_especialidad
 - **Rappi**: [Link a Rappi si tienes perfil]
@@ -309,7 +309,7 @@ Una vez verificado, podras ver:
 - [ ] Categoría: "Café - Especialidades de Café"
 - [ ] Ubicación: Isauro Acosta 311, C.P. 94297, Boca del Río, Veracruz
 - [ ] Teléfono: +52 229 4334031
-- [ ] Sitio web: https://www.lecafe.mx
+- [ ] Sitio web: https://lecafe.mx
 - [ ] Descripción con keywords locales (150-250 caracteres)
 - [ ] Categorías adicionales añadidas (Restaurante, Coworking, Sala de juegos)
 - [ ] 8-10 fotos de calidad

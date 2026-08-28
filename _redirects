@@ -1,0 +1,18 @@
+# Netlify / Cloudflare Pages redirects — Unify to canonical https://lecafe.mx/
+# Redirect non-canonical hosts (www, .com.mx) and force HTTPS
+
+# Redirect lecafe.com.mx (http and https) to canonical
+https://lecafe.com.mx/* https://lecafe.mx/:splat 301!
+http://lecafe.com.mx/* https://lecafe.mx/:splat 301!
+
+# Redirect www subdomains to canonical
+https://www.lecafe.com.mx/* https://lecafe.mx/:splat 301!
+http://www.lecafe.com.mx/* https://lecafe.mx/:splat 301!
+https://www.lecafe.mx/* https://lecafe.mx/:splat 301!
+http://www.lecafe.mx/* https://lecafe.mx/:splat 301!
+
+# Force HTTPS for any request arriving on HTTP (for lecafe.mx)
+http://lecafe.mx/* https://lecafe.mx/:splat 301!
+
+# Optional: ensure index and root are canonical
+/* https://lecafe.mx/:splat 200!

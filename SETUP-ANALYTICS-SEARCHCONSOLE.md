@@ -19,7 +19,7 @@
 1. En la propiedad creada, ve a **"Flujos de datos"** (en Admin)
 2. Haz clic en tu sitio web para crear un flujo
 3. Ingresa:
-   - **URL del sitio web**: https://www.lecafe.mx
+   - **URL del sitio web**: https://lecafe.mx
    - **Nombre del flujo**: "lecafe.mx"
 4. Haz clic en **"Crear flujo"**
 5. **COPIA tu "Google Tag ID"** (empieza con G-)
@@ -74,7 +74,7 @@ En la etiqueta `<head>` de tu index.html, JUSTO DESPUÉS de la línea `<meta cha
 
 1. Una vez verificado el dominio, ve a **"Sitemaps"** en el menú izquierdo
 2. Haz clic en **"Agregar un nuevo sitemap"**
-3. Ingresa: `https://www.lecafe.mx/sitemap.xml`
+3. Ingresa: `https://lecafe.mx/sitemap.xml`
 4. Haz clic en **"Enviar"**
 
 ---
