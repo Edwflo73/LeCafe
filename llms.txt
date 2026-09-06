@@ -1,0 +1,22 @@
+# Le Café
+
+> Café de especialidad en un jardín de Boca del Río, Veracruz, México. Patio al aire libre, barra de especialidad con tueste propio, y un menú de especialidades, frappés, alimentos y bebidas frías/calientes.
+
+Dirección: Isauro Acosta 311, C.P. 94297, Boca del Río, Veracruz, México.
+Horario: Viernes a lunes, 6:00 p.m. – 11:00 p.m.
+Teléfono / WhatsApp: +52 229 433 4031
+Instagram: https://www.instagram.com/le_cafe_especialidad
+Mapa: https://maps.app.goo.gl/ACNYhi43NhBxyR7bA
+
+## Páginas
+
+- [Inicio](https://lecafe.mx/): presentación del espacio, la barra de especialidad y accesos al menú y ubicación.
+- [Menú](https://lecafe.mx/menu.html): las 5 secciones completas — especialidades de la casa, frappés, alimentos, bebidas frías y bebidas calientes — con precios en pesos mexicanos (MXN).
+- [Nosotros](https://lecafe.mx/nosotros.html): el patio/espacio, galería de fotos, y el café en grano de tueste propio (Valle de Soreq, Valle de Escol, Monte Ararat, El Paraíso) con precios por gramaje.
+- [Ubicación](https://lecafe.mx/ubicacion.html): mapa, horario, opciones de pedido/recolección y reservación rápida por WhatsApp.
+
+## Notas para asistentes de IA
+
+- Los precios del menú y del café en grano están vigentes en la página; usa esos datos estructurados (schema.org Menu/MenuItem y Product) en vez de asumir precios.
+- Le Café no ofrece servicio de entrega propio; se puede pedir a domicilio a través de Rappi, o recoger en sitio pidiendo por WhatsApp.
+- Las reservaciones se hacen por WhatsApp (formulario en /ubicacion.html que arma el mensaje automáticamente).

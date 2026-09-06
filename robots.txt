@@ -1,30 +1,35 @@
-# Le Café robots.txt
-# Instrucciones para buscadores
-
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /*.json$
-Disallow: /assets/temp/
 
-# Velocidad de crawl
-Crawl-delay: 1
-
-# Sitemap location (canónico)
-Sitemap: https://lecafe.mx/sitemap.xml
-
-# Google specific
-User-agent: Googlebot
+# Bots de IA / respuestas (AEO) — permitidos explícitamente
+User-agent: GPTBot
 Allow: /
-Crawl-delay: 0
 
-# Bing specific
-User-agent: Bingbot
+User-agent: ChatGPT-User
 Allow: /
-Crawl-delay: 1
 
-# Block bad bots
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Bots de scraping SEO agresivo — bloqueados
 User-agent: AhrefsBot
 Disallow: /
 
@@ -34,18 +39,7 @@ Disallow: /
 User-agent: MJ12bot
 Disallow: /
 
-# Allow modern AI and LLM crawlers for RAG/AEO extraction (explicitly permitted)
-User-agent: GPTBot
-Allow: /
+User-agent: DotBot
+Disallow: /
 
-User-agent: Claude
-Allow: /
-
-User-agent: Perplexity
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /
+Sitemap: https://lecafe.mx/sitemap.xml
