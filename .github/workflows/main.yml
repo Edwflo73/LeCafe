@@ -19,3 +19,18 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: ./public_html/ # Esta es la carpeta destino en Neubox
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/node_modules/**/**
+          **/.github/**
+          **/*.py
+          **/*.md
+          **/*.bak
+          **/.vscode/**
+          **/.DS_Store
+          assets/games/**
+          assets/logos/**
+          assets/menu/**
+          assets/patio/**
