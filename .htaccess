@@ -18,3 +18,31 @@
 
 # Prevent directory listing
 Options -Indexes
+
+# Cache de navegador para archivos estáticos (imágenes, fuentes, CSS, JS).
+# 30 días: suficiente para la mayoría de las visitas recurrentes sin arriesgar
+# contenido obsoleto por mucho tiempo si se reemplaza un archivo con el mismo nombre
+# (p. ej. al cambiar assets/images/parallax-latte-temp.webp).
+# Si reemplazas un archivo y necesitas que se vea el cambio de inmediato,
+# renómbralo o agrega un sufijo de versión (ej. hero.v2.webp).
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/javascript "access plus 7 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|jpe?g|png|svg|ico|woff2)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>
