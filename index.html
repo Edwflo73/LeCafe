@@ -44,15 +44,24 @@
 <!-- Preconexión y precarga de recursos críticos (mejora el tiempo de carga percibido) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<!-- Google Fonts cargado de forma no bloqueante: se precarga como "style" y
+     assets/js/font-loader.js (externo, permitido por el CSP sin 'unsafe-inline')
+     lo convierte en stylesheet activo sin bloquear el primer render. -->
+<link id="gfontsPreload" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&display=swap">
+<script defer src="assets/js/font-loader.js"></script>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&display=swap" rel="stylesheet"></noscript>
 <link rel="preload" href="assets/fonts/LostaMasta-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- Precarga de la foto principal (LCP) con tamaños responsivos -->
+<link rel="preload" as="image" href="assets/images/hero.webp" imagesrcset="assets/images/hero-800.webp 800w, assets/images/hero-1200.webp 1200w, assets/images/hero.webp 1600w" imagesizes="(max-width: 980px) 100vw, 45vw">
 
 <link rel="stylesheet" href="assets/css/style.css">
 
 <!-- Google tag (gtag.js) — init lives in assets/js/ga.js (external file, not
-     inline) because the site's CSP has no 'unsafe-inline' for script-src. -->
+     inline) because the site's CSP has no 'unsafe-inline' for script-src.
+     defer: no bloquea el parseo del HTML mientras se descarga. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZZYTC47K1"></script>
-<script src="assets/js/ga.js"></script>
+<script defer src="assets/js/ga.js"></script>
 
 
 <!-- Datos estructurados (schema.org) -->
@@ -225,7 +234,7 @@
       </div>
       <div class="hero-photo-wrap">
         <div class="glow"></div>
-        <img class="hero-photo gallery-linked" data-gallery-caption="Patio de Le Café iluminado por la noche" src="assets/images/hero.webp" alt="Patio de Le Café iluminado por la noche, vista desde la mesa bajo una sombrilla" width="1600" height="2000" loading="eager">
+        <img class="hero-photo gallery-linked" data-gallery-caption="Patio de Le Café iluminado por la noche" src="assets/images/hero.webp" srcset="assets/images/hero-800.webp 800w, assets/images/hero-1200.webp 1200w, assets/images/hero.webp 1600w" sizes="(max-width: 980px) 100vw, 45vw" alt="Patio de Le Café iluminado por la noche, vista desde la mesa bajo una sombrilla" width="1600" height="2000" loading="eager" fetchpriority="high">
         <div class="hero-photo-caption">
           <svg class="mark" viewBox="0 0 325.51 391.4" aria-hidden="true"><use href="#lecafe-mark"/></svg> Viernes a lunes · 6pm–11pm
         </div>
